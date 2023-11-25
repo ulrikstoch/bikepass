@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CDF612D2A5990C700BF7138 /* BikePassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF612C2A5990C700BF7138 /* BikePassApp.swift */; };
+		5CDF612F2A5990C700BF7138 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF612E2A5990C700BF7138 /* ContentView.swift */; };
+		5CDF61312A5990C800BF7138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF61302A5990C800BF7138 /* Assets.xcassets */; };
+		5CDF61342A5990C800BF7138 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF61332A5990C800BF7138 /* Preview Assets.xcassets */; };
+		5CDF613E2A5990C800BF7138 /* BikePassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF613D2A5990C800BF7138 /* BikePassTests.swift */; };
+		5CDF61482A5990C800BF7138 /* BikePassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF61472A5990C800BF7138 /* BikePassUITests.swift */; };
+		5CDF614A2A5990C800BF7138 /* BikePassUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF61492A5990C800BF7138 /* BikePassUITestsLaunchTests.swift */; };
+		5CDF61572A5990D400BF7138 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF61562A5990D400BF7138 /* HomeView.swift */; };
+		5CDF61592A59917E00BF7138 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF61582A59917E00BF7138 /* Question.swift */; };
+		5CDF615B2A59919100BF7138 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF615A2A59919100BF7138 /* Quiz.swift */; };
+		5CDF615D2A59919E00BF7138 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF615C2A59919D00BF7138 /* QuizView.swift */; };
+		5CDF615F2A5991B000BF7138 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF615E2A5991B000BF7138 /* SettingsView.swift */; };
+		5CDF61612A59979B00BF7138 /* QuizSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF61602A59979B00BF7138 /* QuizSheetView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CDF613A2A5990C800BF7138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CDF61212A5990C700BF7138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CDF61282A5990C700BF7138;
+			remoteInfo = BikePass;
+		};
+		5CDF61442A5990C800BF7138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CDF61212A5990C700BF7138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CDF61282A5990C700BF7138;
+			remoteInfo = BikePass;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5CDF61292A5990C700BF7138 /* BikePass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikePass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDF612C2A5990C700BF7138 /* BikePassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassApp.swift; sourceTree = "<group>"; };
+		5CDF612E2A5990C700BF7138 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CDF61302A5990C800BF7138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CDF61332A5990C800BF7138 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CDF61392A5990C800BF7138 /* BikePassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikePassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDF613D2A5990C800BF7138 /* BikePassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassTests.swift; sourceTree = "<group>"; };
+		5CDF61432A5990C800BF7138 /* BikePassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikePassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDF61472A5990C800BF7138 /* BikePassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassUITests.swift; sourceTree = "<group>"; };
+		5CDF61492A5990C800BF7138 /* BikePassUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5CDF61562A5990D400BF7138 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5CDF61582A59917E00BF7138 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5CDF615A2A59919100BF7138 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		5CDF615C2A59919D00BF7138 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		5CDF615E2A5991B000BF7138 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5CDF61602A59979B00BF7138 /* QuizSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSheetView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CDF61262A5990C700BF7138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CDF61362A5990C800BF7138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CDF61402A5990C800BF7138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CDF61202A5990C700BF7138 = {
+			isa = PBXGroup;
+			children = (
+				5CDF612B2A5990C700BF7138 /* BikePass */,
+				5CDF613C2A5990C800BF7138 /* BikePassTests */,
+				5CDF61462A5990C800BF7138 /* BikePassUITests */,
+				5CDF612A2A5990C700BF7138 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CDF612A2A5990C700BF7138 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF61292A5990C700BF7138 /* BikePass.app */,
+				5CDF61392A5990C800BF7138 /* BikePassTests.xctest */,
+				5CDF61432A5990C800BF7138 /* BikePassUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CDF612B2A5990C700BF7138 /* BikePass */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF612C2A5990C700BF7138 /* BikePassApp.swift */,
+				5CDF612E2A5990C700BF7138 /* ContentView.swift */,
+				5CDF61562A5990D400BF7138 /* HomeView.swift */,
+				5CDF61582A59917E00BF7138 /* Question.swift */,
+				5CDF615A2A59919100BF7138 /* Quiz.swift */,
+				5CDF615C2A59919D00BF7138 /* QuizView.swift */,
+				5CDF61602A59979B00BF7138 /* QuizSheetView.swift */,
+				5CDF615E2A5991B000BF7138 /* SettingsView.swift */,
+				5CDF61302A5990C800BF7138 /* Assets.xcassets */,
+				5CDF61322A5990C800BF7138 /* Preview Content */,
+			);
+			path = BikePass;
+			sourceTree = "<group>";
+		};
+		5CDF61322A5990C800BF7138 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF61332A5990C800BF7138 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5CDF613C2A5990C800BF7138 /* BikePassTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF613D2A5990C800BF7138 /* BikePassTests.swift */,
+			);
+			path = BikePassTests;
+			sourceTree = "<group>";
+		};
+		5CDF61462A5990C800BF7138 /* BikePassUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF61472A5990C800BF7138 /* BikePassUITests.swift */,
+				5CDF61492A5990C800BF7138 /* BikePassUITestsLaunchTests.swift */,
+			);
+			path = BikePassUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CDF61282A5990C700BF7138 /* BikePass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CDF614D2A5990C800BF7138 /* Build configuration list for PBXNativeTarget "BikePass" */;
+			buildPhases = (
+				5CDF61252A5990C700BF7138 /* Sources */,
+				5CDF61262A5990C700BF7138 /* Frameworks */,
+				5CDF61272A5990C700BF7138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikePass;
+			productName = BikePass;
+			productReference = 5CDF61292A5990C700BF7138 /* BikePass.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CDF61382A5990C800BF7138 /* BikePassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CDF61502A5990C800BF7138 /* Build configuration list for PBXNativeTarget "BikePassTests" */;
+			buildPhases = (
+				5CDF61352A5990C800BF7138 /* Sources */,
+				5CDF61362A5990C800BF7138 /* Frameworks */,
+				5CDF61372A5990C800BF7138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CDF613B2A5990C800BF7138 /* PBXTargetDependency */,
+			);
+			name = BikePassTests;
+			productName = BikePassTests;
+			productReference = 5CDF61392A5990C800BF7138 /* BikePassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5CDF61422A5990C800BF7138 /* BikePassUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CDF61532A5990C800BF7138 /* Build configuration list for PBXNativeTarget "BikePassUITests" */;
+			buildPhases = (
+				5CDF613F2A5990C800BF7138 /* Sources */,
+				5CDF61402A5990C800BF7138 /* Frameworks */,
+				5CDF61412A5990C800BF7138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CDF61452A5990C800BF7138 /* PBXTargetDependency */,
+			);
+			name = BikePassUITests;
+			productName = BikePassUITests;
+			productReference = 5CDF61432A5990C800BF7138 /* BikePassUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CDF61212A5990C700BF7138 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5CDF61282A5990C700BF7138 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					5CDF61382A5990C800BF7138 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5CDF61282A5990C700BF7138;
+					};
+					5CDF61422A5990C800BF7138 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5CDF61282A5990C700BF7138;
+					};
+				};
+			};
+			buildConfigurationList = 5CDF61242A5990C700BF7138 /* Build configuration list for PBXProject "BikePass" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CDF61202A5990C700BF7138;
+			productRefGroup = 5CDF612A2A5990C700BF7138 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CDF61282A5990C700BF7138 /* BikePass */,
+				5CDF61382A5990C800BF7138 /* BikePassTests */,
+				5CDF61422A5990C800BF7138 /* BikePassUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CDF61272A5990C700BF7138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDF61342A5990C800BF7138 /* Preview Assets.xcassets in Resources */,
+				5CDF61312A5990C800BF7138 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CDF61372A5990C800BF7138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CDF61412A5990C800BF7138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CDF61252A5990C700BF7138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDF615F2A5991B000BF7138 /* SettingsView.swift in Sources */,
+				5CDF61572A5990D400BF7138 /* HomeView.swift in Sources */,
+				5CDF615B2A59919100BF7138 /* Quiz.swift in Sources */,
+				5CDF61612A59979B00BF7138 /* QuizSheetView.swift in Sources */,
+				5CDF61592A59917E00BF7138 /* Question.swift in Sources */,
+				5CDF612F2A5990C700BF7138 /* ContentView.swift in Sources */,
+				5CDF612D2A5990C700BF7138 /* BikePassApp.swift in Sources */,
+				5CDF615D2A59919E00BF7138 /* QuizView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CDF61352A5990C800BF7138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDF613E2A5990C800BF7138 /* BikePassTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CDF613F2A5990C800BF7138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDF614A2A5990C800BF7138 /* BikePassUITestsLaunchTests.swift in Sources */,
+				5CDF61482A5990C800BF7138 /* BikePassUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CDF613B2A5990C800BF7138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CDF61282A5990C700BF7138 /* BikePass */;
+			targetProxy = 5CDF613A2A5990C800BF7138 /* PBXContainerItemProxy */;
+		};
+		5CDF61452A5990C800BF7138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CDF61282A5990C700BF7138 /* BikePass */;
+			targetProxy = 5CDF61442A5990C800BF7138 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5CDF614B2A5990C800BF7138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5CDF614C2A5990C800BF7138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CDF614E2A5990C800BF7138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BikePass/Preview Content\"";
+				DEVELOPMENT_TEAM = 5WL7MTZTYN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CDF614F2A5990C800BF7138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BikePass/Preview Content\"";
+				DEVELOPMENT_TEAM = 5WL7MTZTYN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5CDF61512A5990C800BF7138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WL7MTZTYN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikePass.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BikePass";
+			};
+			name = Debug;
+		};
+		5CDF61522A5990C800BF7138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WL7MTZTYN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikePass.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BikePass";
+			};
+			name = Release;
+		};
+		5CDF61542A5990C800BF7138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WL7MTZTYN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePassUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BikePass;
+			};
+			name = Debug;
+		};
+		5CDF61552A5990C800BF7138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WL7MTZTYN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePassUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BikePass;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CDF61242A5990C700BF7138 /* Build configuration list for PBXProject "BikePass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CDF614B2A5990C800BF7138 /* Debug */,
+				5CDF614C2A5990C800BF7138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CDF614D2A5990C800BF7138 /* Build configuration list for PBXNativeTarget "BikePass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CDF614E2A5990C800BF7138 /* Debug */,
+				5CDF614F2A5990C800BF7138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CDF61502A5990C800BF7138 /* Build configuration list for PBXNativeTarget "BikePassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CDF61512A5990C800BF7138 /* Debug */,
+				5CDF61522A5990C800BF7138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CDF61532A5990C800BF7138 /* Build configuration list for PBXNativeTarget "BikePassUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CDF61542A5990C800BF7138 /* Debug */,
+				5CDF61552A5990C800BF7138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CDF61212A5990C700BF7138 /* Project object */;
+}
