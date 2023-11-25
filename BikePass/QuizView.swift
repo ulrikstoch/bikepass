@@ -68,7 +68,7 @@ struct QuizView: View {
             VStack(spacing: 20) {
                 
                 Button(action: {showingQuizSheet = true}, label: {
-                        Text("Start Quiz")
+                        Text("Start Quizzen")
                             .font(.headline)
                             .frame(height: 40.0)
                             .frame(maxWidth: .infinity)
