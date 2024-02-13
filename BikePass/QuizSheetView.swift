@@ -10,111 +10,77 @@ import SwiftUI
 
 struct QuizSheetView: View {
     @Environment(\.presentationMode) var presentationMode
-    @Environment(\.colorScheme) var colorScheme
     let quiz: Quiz
     @State private var currentQuestionIndex = 0
-    @State private var selectedAnswers = Set<Int>()
-    @State private var showingAlert = false
-    @State private var alertTitle = ""
-
-    private func toggleAnswer(at index: Int) {
-        switch quiz.questions[currentQuestionIndex].selectionType {
-        case .single:
-            selectedAnswers = [index]
-        case .multiple:
-            if selectedAnswers.contains(index) {
-                selectedAnswers.remove(index)
-            } else {
-                selectedAnswers.insert(index)
-            }
-        }
-    }
-
-
-    private func nextQuestion() {
-        if selectedAnswers == quiz.questions[currentQuestionIndex].correctAnswers {
-            alertTitle = "Correct!"
-            if currentQuestionIndex < quiz.questions.count - 1 {
-                currentQuestionIndex += 1
-            }
-        } else {
-            alertTitle = "Wrong answer. Try again"
-        }
-        showingAlert = true
-    }
+    // Define a state to manage explicit navigation link activation
+    @State private var activeLink: Int? = nil
+    @State private var showQuizCompleteView = false
+    @Environment(\.colorScheme) var colorScheme
+    var dismissAction: () -> Void // Add this line
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Spacer()
-            Text(quiz.questions[currentQuestionIndex].question)
-                .font(.title2)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.leading)
-            
-            VStack {
-                ForEach(Array(quiz.questions[currentQuestionIndex].options.indices), id: \.self) { index in
-                    Button(action: {
-                        toggleAnswer(at: index)
-                    }) {
-                        HStack {
-                            Text(quiz.questions[currentQuestionIndex].options[index])
-                                .foregroundColor(Color(UIColor.label))
-                                .padding(.vertical, 6.0)
-                            Spacer()
-                            if selectedAnswers.contains(index) {
-                                Image(systemName: "checkmark.circle.fill")
-                                
-                            }
-                        }
-                        .padding()
- 
-                        .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
-                        .cornerRadius(13)
+        NavigationStack {
+            ZStack(alignment: .top) {
+                colorScheme == .dark ? Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all) : Color(UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all)
+                
+                
+//                Color.red.edgesIgnoringSafeArea(.all)
+                // Iterate through each question to prepare NavigationLink
+                ForEach(0..<(quiz.questions.count + 1), id: \.self) { index in
+                    NavigationLink(destination: questionView(index: index), tag: index, selection: $activeLink) {
+                        EmptyView()
+                    }
+                    .hidden()
+                }
+
+                
+                // Present the current question
+                questionView(index: currentQuestionIndex)
+//                    .padding(.horizontal)
+                
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        presentationMode.wrappedValue.dismiss()
                     }
                 }
             }
-
-
-            Button(action: nextQuestion, label: {
-                    Text("Next")
-                        .font(.headline)
-                        .frame(height: 40.0)
-                        .frame(maxWidth: .infinity)
-                })
-                .buttonStyle(.borderedProminent)
-
-            Spacer()
-
-            
-        }
-        .padding(.horizontal)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
-        .alert(isPresented: $showingAlert) {
-            Alert(
-                title: Text(alertTitle),
-                dismissButton: .default(Text("OK")) {
-                    if alertTitle == "Correct!" {
-                        selectedAnswers = Set<Int>()
-                    }
-                }
-            )
-        }
-        .navigationTitle("Question \(currentQuestionIndex + 1) of \(quiz.questions.count)")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Cancel") {
-                    presentationMode.wrappedValue.dismiss()
-                }
+            .sheet(isPresented: $showQuizCompleteView) {
+                QuizCompleteView(dismissAction: dismissAction)
             }
+            
         }
     }
+    
+    
+    @ViewBuilder
+    private func questionView(index: Int) -> some View {
+        if index < quiz.questions.count {
+            // Return the question view for the current index
+            QuestionView(question: quiz.questions[index], totalQuestions: quiz.questions.count, questionIndex: index) {
+                // Navigate to the next question or the quiz completion view
+                activeLink = index + 1 // Automatically navigate to the next "question"
+            }
+        } else {
+            // When index equals quiz.questions.count, show the QuizCompleteView
+            QuizCompleteView(dismissAction: dismissAction)
+        }
+    }
+
 }
+
+
+
+
+
 
 
 struct QuizSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizSheetView(quiz: quiz)
+        // Define a mock dismissAction for the preview
+        QuizSheetView(quiz: quiz, dismissAction: {
+            print("Dismiss action for preview")
+        })
     }
 }

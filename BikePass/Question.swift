@@ -17,6 +17,8 @@ struct Question {
     let options: [String]
     let correctAnswers: Set<Int>
     let selectionType: SelectionType
+    var imageName: String
+    let videoURL: URL
 }
 
 
