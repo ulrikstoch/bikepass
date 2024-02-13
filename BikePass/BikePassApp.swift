@@ -12,7 +12,7 @@ struct BikePassApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                HomeView()
+                BikePassView()
                     .tabItem {
                         Image(systemName: "house")
                         Text("Home")

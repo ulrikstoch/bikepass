@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct CustomAlertView: View {
     let icon: String
     let title: String
@@ -22,7 +23,7 @@ struct CustomAlertView: View {
                     .fontWeight(.bold)
                 Text(description)
                     .font(.subheadline)
-                    .foregroundColor(Color(UIColor.secondaryLabel))
+                    .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
             }
 
