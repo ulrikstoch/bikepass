@@ -11,25 +11,8 @@ import SwiftUI
 struct BikePassApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView {
-                BikePassView()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Home")
-                    }
-
-                QuizView(quiz: quiz) // You need to pass your questions here
-                    .tabItem {
-                        Image(systemName: "questionmark.circle")
-                        Text("Quiz")
-                    }
-
-                SettingsView()
-                    .tabItem {
-                        Image(systemName: "gear")
-                        Text("Settings")
-                    }
-            }
+            ContentView()
         }
     }
 }
+

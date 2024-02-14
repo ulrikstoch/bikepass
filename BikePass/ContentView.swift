@@ -9,13 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+
+            QuizView(quiz: quiz) // You need to pass your questions here
+                .tabItem {
+                    Image(systemName: "checklist")
+                    Text("Quiz")
+                }
+
+            BikePassView()
+                .tabItem {
+                    Image(systemName: "menucard.fill")
+                    Text("Pass")
+                }
         }
-        .padding()
     }
 }
 
