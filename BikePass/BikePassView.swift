@@ -10,27 +10,27 @@ import CoreMotion
 import CoreHaptics
 
 
-class MotionManager: ObservableObject {
-    private var motionManager = CMMotionManager()
-    
-    @Published var pitch: Double = 0 // Tilt forward/backward
-    @Published var roll: Double = 0 // Tilt left/right
-
-    init() {
-        startMotionUpdates()
-    }
-
-    func startMotionUpdates() {
-        if motionManager.isDeviceMotionAvailable {
-            motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
-            motionManager.startDeviceMotionUpdates(to: .main) { [weak self] (motion, error) in
-                guard let motion = motion, error == nil else { return }
-                self?.pitch = motion.attitude.pitch
-                self?.roll = motion.attitude.roll
-            }
-        }
-    }
-}
+//class MotionManager: ObservableObject {
+//    private var motionManager = CMMotionManager()
+//    
+//    @Published var pitch: Double = 0 // Tilt forward/backward
+//    @Published var roll: Double = 0 // Tilt left/right
+//
+//    init() {
+//        startMotionUpdates()
+//    }
+//
+//    func startMotionUpdates() {
+//        if motionManager.isDeviceMotionAvailable {
+//            motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
+//            motionManager.startDeviceMotionUpdates(to: .main) { [weak self] (motion, error) in
+//                guard let motion = motion, error == nil else { return }
+//                self?.pitch = motion.attitude.pitch
+//                self?.roll = motion.attitude.roll
+//            }
+//        }
+//    }
+//}
 
 
 struct BikePassView: View {

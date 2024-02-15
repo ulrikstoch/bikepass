@@ -10,13 +10,17 @@ import AVKit
 
 struct HomeView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Binding var showVideoView: Bool
+//    @Binding var showQuizView: Bool
+    @Binding var fadeTransition: Bool
+    
     
     
     var body: some View {
         VStack(alignment: .leading) {
             Image("header")
                 .resizable()
-
+            
                 .scaledToFit()
                 .cornerRadius(30)
             
@@ -50,7 +54,7 @@ struct HomeView: View {
                     .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.white.opacity(0.95), radius: 0, x: 0, y: 1)
                 
                 Button(action: {
-//                    QuizView(quiz: quiz)
+                    showVideoView = true
                     let generator = UIImpactFeedbackGenerator(style: .soft)
                     generator.impactOccurred()
                 }, label: {
@@ -86,7 +90,7 @@ struct HomeView: View {
                             .cornerRadius(15)
                             .shadow(color: .black.opacity(0.35), radius: 1.5, x: 0, y: 2)
                         
-
+                        
                         Text("Get started")
                             .font(.headline)
                             .foregroundColor(.white)
@@ -98,6 +102,11 @@ struct HomeView: View {
                 
             }
         }
+        
+        
+        
+        
+        
         .padding(.all, 24.0)
     }
 }
@@ -105,6 +114,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(showVideoView: .constant(false), fadeTransition: .constant(false))
     }
 }
