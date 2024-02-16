@@ -11,6 +11,7 @@ import AVKit
 struct HomeView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var navigateToVideoView = false
+    private let thumbnailPlayer = AVPlayer(url: Bundle.main.url(forResource: "video1", withExtension: "mp4")!)
     
 //    @Binding var showVideoView: Bool
 //    @Binding var showQuizView: Bool
@@ -21,10 +22,22 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                Image("header")
-                    .resizable()
                 
-                    .scaledToFit()
+                VideoPlayer(player: thumbnailPlayer)
+                    .onAppear {
+                        thumbnailPlayer.play()
+                        NotificationCenter.default.addObserver(
+                            forName: .AVPlayerItemDidPlayToEndTime,
+                            object: thumbnailPlayer.currentItem,
+                            queue: .main) { _ in
+                                // Seek to the start
+                                thumbnailPlayer.seek(to: CMTime.zero)
+                                // Play the video again
+                                thumbnailPlayer.play()
+                            }
+                    }
+                
+                    .aspectRatio(1/1, contentMode: .fit)
                     .cornerRadius(30)
                 
                 Text("Welcome to \nCopenhagen 👋")
