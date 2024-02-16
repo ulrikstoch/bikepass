@@ -116,11 +116,11 @@ struct QuizView: View {
             
 
 
-            VStack(alignment: .center) {
+            VStack(alignment: .leading) {
                 Text("Unlock your own Bike Pass today")
                     .font(.system(size: 32))
                     .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
                     .padding(.bottom, 5.0)
                     .padding(.top, 16.0)
                 
@@ -130,14 +130,14 @@ struct QuizView: View {
                     .fontWeight(.regular)
                 
                     .foregroundColor(colorScheme == .dark ? Color(UIColor.label) : Color(UIColor.secondaryLabel))
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
                     .lineSpacing(5)
 
             }
-            .padding(.horizontal, 15.0)
-            .offset(y: -50)
+//            .padding(.horizontal, 15.0)
+//            .offset(y: -50)
 
-        
+        Spacer()
             
             VStack {
                 PrimaryButton(action: {

@@ -54,7 +54,7 @@
 		5C4938822B7D7BC70013EF32 /* full_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = full_video.mp4; sourceTree = "<group>"; };
 		5C4938842B7D85240013EF32 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		5C4938862B7D89110013EF32 /* MiniBikePassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBikePassView.swift; sourceTree = "<group>"; };
-		5C4938882B7E66700013EF32 /* video_thumb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video_thumb.mp4; path = Assets/video_thumb.mp4; sourceTree = SOURCE_ROOT; };
+		5C4938882B7E66700013EF32 /* video_thumb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video_thumb.mp4; path = BikePass/Videos/video_thumb.mp4; sourceTree = SOURCE_ROOT; };
 		5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompleteView.swift; sourceTree = "<group>"; };
 		5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		5C7F18032B718D9A00E60D3A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
@@ -101,6 +101,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C69F91A2B7F5F0600B869AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF61582A59917E00BF7138 /* Question.swift */,
+				5CDF615A2A59919100BF7138 /* Quiz.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C69F91B2B7F5F3C00B869AE /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				5C4938882B7E66700013EF32 /* video_thumb.mp4 */,
+				5C4938822B7D7BC70013EF32 /* full_video.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		5C69F91C2B7F5F5B00B869AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF612E2A5990C700BF7138 /* ContentView.swift */,
+				5CDF61562A5990D400BF7138 /* HomeView.swift */,
+				5C4938802B7D78280013EF32 /* VideoView.swift */,
+				5CDF615C2A59919D00BF7138 /* QuizView.swift */,
+				5C7F18032B718D9A00E60D3A /* QuestionView.swift */,
+				5CDF61602A59979B00BF7138 /* QuizSheetView.swift */,
+				5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */,
+				5C4680C82B7BCF180074F40E /* BikePassView.swift */,
+				5CDF615E2A5991B000BF7138 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C69F91D2B7F5F7C00B869AE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5C69F91A2B7F5F0600B869AE /* Models */,
+				5C4938862B7D89110013EF32 /* MiniBikePassView.swift */,
+				5C4938842B7D85240013EF32 /* PrimaryButton.swift */,
+				5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		5CDF61202A5990C700BF7138 = {
 			isa = PBXGroup;
 			children = (
@@ -125,22 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				5CDF612C2A5990C700BF7138 /* BikePassApp.swift */,
-				5CDF612E2A5990C700BF7138 /* ContentView.swift */,
-				5CDF61562A5990D400BF7138 /* HomeView.swift */,
-				5CDF61582A59917E00BF7138 /* Question.swift */,
-				5CDF615A2A59919100BF7138 /* Quiz.swift */,
-				5C7F18032B718D9A00E60D3A /* QuestionView.swift */,
-				5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */,
-				5CDF615C2A59919D00BF7138 /* QuizView.swift */,
-				5C4938842B7D85240013EF32 /* PrimaryButton.swift */,
-				5C4938802B7D78280013EF32 /* VideoView.swift */,
-				5CDF61602A59979B00BF7138 /* QuizSheetView.swift */,
-				5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */,
-				5C4680C82B7BCF180074F40E /* BikePassView.swift */,
-				5C4938862B7D89110013EF32 /* MiniBikePassView.swift */,
-				5CDF615E2A5991B000BF7138 /* SettingsView.swift */,
-				5C4938882B7E66700013EF32 /* video_thumb.mp4 */,
-				5C4938822B7D7BC70013EF32 /* full_video.mp4 */,
+				5C69F91C2B7F5F5B00B869AE /* Views */,
+				5C69F91D2B7F5F7C00B869AE /* Components */,
+				5C69F91B2B7F5F3C00B869AE /* Videos */,
 				5CDF61302A5990C800BF7138 /* Assets.xcassets */,
 				5CDF61322A5990C800BF7138 /* Preview Content */,
 			);
