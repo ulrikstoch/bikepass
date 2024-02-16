@@ -45,7 +45,7 @@ struct PrimaryButton: View {
                 )
             
                 .cornerRadius(20)
-                .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.white.opacity(0.95), radius: 0, x: 0, y: 1)
+                .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
             
             Button(action: action, label: {
                 

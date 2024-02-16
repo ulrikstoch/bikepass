@@ -146,30 +146,13 @@ struct QuizView: View {
                             let generator = UIImpactFeedbackGenerator(style: .soft)
                             generator.impactOccurred()
                 }, label: "Start Quiz")
-//                
-//                Button(action: {showVideoPlayer = true}, label: {
-//                    Text("Watch video again")
-//                        .padding(.vertical)
-//                        .fontWeight(.medium)
-//                        .multilineTextAlignment(.center)
-//                        .frame(maxWidth: .infinity)
-//                        .frame(height: 32)
-//                    
-//                })
-//                .sheet(isPresented: $showVideoPlayer) {
-//                    VideoPlayerView(showButton: $showButton)
-//                }
-//                .buttonStyle(.borderless)
             }
             
             
         }
         .padding([.top, .leading, .trailing], 24.0)
         
-        .background(Color.white)
-        //        .edgesIgnoringSafeArea(.all)
-        
-        //        .ignoresSafeArea(.all)
+        .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
         .sheet(isPresented: $showingQuizSheet) {
             NavigationView {
                 QuizSheetView(quiz: quiz, dismissAction: {

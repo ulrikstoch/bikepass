@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum SelectionType {
+enum SelectionType: Hashable {
     case single
     case multiple
 }
 
-struct Question {
+struct Question: Hashable {
     let question: String
     let options: [String]
     let correctAnswers: Set<Int>

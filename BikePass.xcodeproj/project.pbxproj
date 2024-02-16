@@ -12,6 +12,7 @@
 		5C4938832B7D7BC70013EF32 /* full_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C4938822B7D7BC70013EF32 /* full_video.mp4 */; };
 		5C4938852B7D85240013EF32 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4938842B7D85240013EF32 /* PrimaryButton.swift */; };
 		5C4938872B7D89110013EF32 /* MiniBikePassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4938862B7D89110013EF32 /* MiniBikePassView.swift */; };
+		5C4938892B7E66700013EF32 /* video_thumb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C4938882B7E66700013EF32 /* video_thumb.mp4 */; };
 		5C73B08D2B72AFAA0058ECDE /* QuizCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */; };
 		5C73B08F2B72CC1C0058ECDE /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */; };
 		5C7F18042B718D9A00E60D3A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F18032B718D9A00E60D3A /* QuestionView.swift */; };
@@ -53,6 +54,7 @@
 		5C4938822B7D7BC70013EF32 /* full_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = full_video.mp4; sourceTree = "<group>"; };
 		5C4938842B7D85240013EF32 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		5C4938862B7D89110013EF32 /* MiniBikePassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBikePassView.swift; sourceTree = "<group>"; };
+		5C4938882B7E66700013EF32 /* video_thumb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video_thumb.mp4; path = Assets/video_thumb.mp4; sourceTree = SOURCE_ROOT; };
 		5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompleteView.swift; sourceTree = "<group>"; };
 		5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		5C7F18032B718D9A00E60D3A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				5C4680C82B7BCF180074F40E /* BikePassView.swift */,
 				5C4938862B7D89110013EF32 /* MiniBikePassView.swift */,
 				5CDF615E2A5991B000BF7138 /* SettingsView.swift */,
+				5C4938882B7E66700013EF32 /* video_thumb.mp4 */,
 				5C4938822B7D7BC70013EF32 /* full_video.mp4 */,
 				5CDF61302A5990C800BF7138 /* Assets.xcassets */,
 				5CDF61322A5990C800BF7138 /* Preview Content */,
@@ -273,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C4938892B7E66700013EF32 /* video_thumb.mp4 in Resources */,
 				5C4938832B7D7BC70013EF32 /* full_video.mp4 in Resources */,
 				5CDF61342A5990C800BF7138 /* Preview Assets.xcassets in Resources */,
 				5CDF61312A5990C800BF7138 /* Assets.xcassets in Resources */,
