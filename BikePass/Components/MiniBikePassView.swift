@@ -17,27 +17,27 @@ import CoreMotion
 import CoreHaptics
 
 
-class MotionManager: ObservableObject {
-    private var motionManager = CMMotionManager()
-    
-    @Published var pitch: Double = 0 // Tilt forward/backward
-    @Published var roll: Double = 0 // Tilt left/right
-
-    init() {
-        startMotionUpdates()
-    }
-
-    func startMotionUpdates() {
-        if motionManager.isDeviceMotionAvailable {
-            motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
-            motionManager.startDeviceMotionUpdates(to: .main) { [weak self] (motion, error) in
-                guard let motion = motion, error == nil else { return }
-                self?.pitch = motion.attitude.pitch
-                self?.roll = motion.attitude.roll
-            }
-        }
-    }
-}
+//class MotionManager: ObservableObject {
+//    private var motionManager = CMMotionManager()
+//    
+//    @Published var pitch: Double = 0 // Tilt forward/backward
+//    @Published var roll: Double = 0 // Tilt left/right
+//
+//    init() {
+//        startMotionUpdates()
+//    }
+//
+//    func startMotionUpdates() {
+//        if motionManager.isDeviceMotionAvailable {
+//            motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
+//            motionManager.startDeviceMotionUpdates(to: .main) { [weak self] (motion, error) in
+//                guard let motion = motion, error == nil else { return }
+//                self?.pitch = motion.attitude.pitch
+//                self?.roll = motion.attitude.roll
+//            }
+//        }
+//    }
+//}
 
 
 struct MiniBikePassView: View {
@@ -96,7 +96,7 @@ struct MiniBikePassView: View {
                         endPoint: UnitPoint(x: 0.5, y: 1)
                     )
                 )
-                .cornerRadius(24)
+                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
                 .rotation3DEffect(Angle(degrees: rotationAngleX), axis: (x: 1, y: 0, z: 0))
                 .rotation3DEffect(Angle(degrees: rotationAngleY), axis: (x: 0, y: 1, z: 0))
                 .gesture(

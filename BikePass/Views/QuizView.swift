@@ -14,7 +14,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [1, 2],
         selectionType: .multiple,
         imageName: "img_q1",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/5c34a4d6ff917aa2a99d037e5ba182cc/manifest/video.m3u8")!
         
     ),
     Question(
@@ -23,7 +23,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [1],
         selectionType: .single,
         imageName: "img_q2",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/9ac931bbb709a55bd2640776cb243973/manifest/video.m3u8")!
     ),
     Question(
         question: "Which side do you overtake on?",
@@ -31,7 +31,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [1],
         selectionType: .single,
         imageName: "img_q3",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/89a9f12fc68925bec975c797af70ee57/manifest/video.m3u8")!
     ),
     Question(
         question: "What do you do before overtaking?",
@@ -39,7 +39,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [2],
         selectionType: .single,
         imageName: "img_q4",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/30f949f07b84480e39f275479cd8a2d6/manifest/video.m3u8")!
     ),
     Question(
         question: "What do you do when you hear a bell behind you?",
@@ -47,7 +47,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [0],
         selectionType: .single,
         imageName: "img_q5",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/69d5027bc2d290566ffc52fb089cd25e/manifest/video.m3u8")!
     ),
     Question(
         question: "You want to stop in bike lane or road – what do you do?",
@@ -55,7 +55,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [2],
         selectionType: .single,
         imageName: "img_q6",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/1537a589b73f68659c0036520a2a4226/manifest/video.m3u8")!
     ),
     Question(
         question: "How do you turn to the right?",
@@ -63,7 +63,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [0],
         selectionType: .single,
         imageName: "img_q7",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/d6ef24e8df072060d89f3e2677f4a252/manifest/video.m3u8")!
     ),
     Question(
         question: "How do you make a left turn?",
@@ -71,7 +71,7 @@ let quiz = Quiz(questions: [
         correctAnswers: [1],
         selectionType: .single,
         imageName: "img_q8",
-        videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/f2550c0d2a5a90c42bcffa26a7039f67/manifest/video.m3u8")!
     ),
     
 ])
@@ -100,67 +100,90 @@ let quiz = Quiz(questions: [
 
 struct QuizView: View {
     let quiz: Quiz
+    @ObservedObject var viewModel: QuizViewModel = QuizViewModel()
     @State private var showingQuizSheet = false
+    @State private var showBikePassView = false
     @State private var showVideoPlayer = false
     @State private var showButton = false
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
-        VStack(alignment: .center) {
-            
-            VStack {
-                MiniBikePassView()
-            }
-            .padding(.horizontal)
-            
+        VStack {
+                    if viewModel.quizCompleted && showBikePassView {
+                        BikePassOwner()
+                            .transition(.opacity) // Apply an opacity transition
+                            .animation(.easeIn, value: showBikePassView) // Animate the transition
+                            .ignoresSafeArea(.all)
+                            .navigationBarHidden(true)
+
+                    } else {
+                        VStack(alignment: .center) {
+                            
+                            VStack {
+                                Image("package")
+//                                MiniBikePassView()
+                            }
+                            .frame(maxHeight: 400)
+//                            .padding(.horizontal)
+//                            .padding(.bottom)
+                            
 
 
-            VStack(alignment: .leading) {
-                Text("Unlock your own Bike Pass today")
-                    .font(.system(size: 32))
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.leading)
-                    .padding(.bottom, 5.0)
-                    .padding(.top, 16.0)
-                
-                
-                Text("Complete the 8 question test and get your own BikePass today.")
-                    .font(.system(size: 17))
-                    .fontWeight(.regular)
-                
-                    .foregroundColor(colorScheme == .dark ? Color(UIColor.label) : Color(UIColor.secondaryLabel))
-                    .multilineTextAlignment(.leading)
-                    .lineSpacing(5)
+                            VStack(alignment: .leading) {
+                                Text("Unlock your own Bike Pass today")
+                                    .font(.system(size: 32))
+                                    .fontWeight(.bold)
+                                    .multilineTextAlignment(.leading)
+                                    .padding(.bottom, 5.0)
+                                    .padding(.top, 16.0)
+                                
+                                
+                                Text("Complete the 8 question test and get your own BikePass today.")
+                                    .font(.system(size: 17))
+                                    .fontWeight(.regular)
+                                
+                                    .foregroundColor(colorScheme == .dark ? Color(UIColor.label) : Color(UIColor.secondaryLabel))
+                                    .multilineTextAlignment(.leading)
+                                    .lineSpacing(5)
 
-            }
-//            .padding(.horizontal, 15.0)
-//            .offset(y: -50)
+                            }
 
-        Spacer()
-            
-            VStack {
-                PrimaryButton(action: {
-                            showingQuizSheet = true
-                            // Optionally trigger haptic feedback or any other actions
-                            let generator = UIImpactFeedbackGenerator(style: .soft)
-                            generator.impactOccurred()
-                }, label: "Start Quiz")
-            }
-            
-            
-        }
-        .padding([.top, .leading, .trailing], 24.0)
-        
-        .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
-        .sheet(isPresented: $showingQuizSheet) {
-            NavigationView {
-                QuizSheetView(quiz: quiz, dismissAction: {
-                    showingQuizSheet = false
-                })
-            }
-            .interactiveDismissDisabled(true)
-        }
+                        Spacer()
+                            
+                            VStack {
+                                PrimaryButton(action: {
+                                            showingQuizSheet = true
+                                            let generator = UIImpactFeedbackGenerator(style: .soft)
+                                            generator.impactOccurred()
+                                }, label: "Start test")
+                            }
+                            
+                            
+                        }
+                        .toolbarRole(.editor)
+                        .padding([.top, .leading, .trailing], 24.0)
+                        
+                        .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
+                        .sheet(isPresented: $showingQuizSheet) {
+                            NavigationView {
+                                QuizSheetView(quiz: quiz, viewModel: viewModel, dismissAction: {
+                                    showingQuizSheet = false
+                                })
+                            }
+                            .interactiveDismissDisabled(true)
+                        }
+                    }
+                }
+                .onChange(of: viewModel.quizCompleted) { completed in
+                    if completed {
+                        withAnimation {
+                            showBikePassView = true
+                        }
+                    }
+                }
+
+
     }
 }
 

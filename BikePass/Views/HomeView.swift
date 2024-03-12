@@ -19,12 +19,17 @@ struct HomeView: View {
     
     
     
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
                 
                 VideoPlayer(player: thumbnailPlayer)
                     .onAppear {
+                        let audioSession = AVAudioSession.sharedInstance()
+                        try? audioSession.setCategory(.ambient)
+                        try? audioSession.setActive(true)
+
                         thumbnailPlayer.play()
                         NotificationCenter.default.addObserver(
                             forName: .AVPlayerItemDidPlayToEndTime,
@@ -37,8 +42,9 @@ struct HomeView: View {
                             }
                     }
                 
+                
                     .aspectRatio(1/1, contentMode: .fit)
-                    .cornerRadius(30)
+                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 
                 Text("Welcome to \nCopenhagen 👋")
                     .font(.system(size: 37))
@@ -57,6 +63,8 @@ struct HomeView: View {
                 
                 Spacer()
                 
+                
+                
                 ZStack {
                     
                     Rectangle()
@@ -66,14 +74,13 @@ struct HomeView: View {
                             colorScheme == .dark ? darkModeGradient : lightModeGradient
                         )
                     
-                        .cornerRadius(20)
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                         .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.white.opacity(0.95), radius: 0, x: 0, y: 1)
                     
                     NavigationLink(destination: VideoView(), isActive: $navigateToVideoView) {
                         EmptyView()
                     }
                     
-//                    .hidden()
                     
                     PrimaryButton(action: {
                         // Trigger haptic feedback or any other actions
@@ -83,20 +90,37 @@ struct HomeView: View {
                         // Trigger navigation
                         navigateToVideoView = true
                     }, label: "Continue")
-                    
-//                    PrimaryButton(action: {
-//                            showVideoView = true
-//                            // Optionally trigger haptic feedback or any other actions
-//                            let generator = UIImpactFeedbackGenerator(style: .soft)
-//                            generator.impactOccurred()
-//                        
-//                    }, label: "Continue")
-                    
+        
                 }
+                NavigationLink(destination: InfoView()) {
+                                    Text("About BikePass")
+                                        .foregroundColor(Color.gray)
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 32)
+                                }
+                                .buttonStyle(.plain)
             }
                     .padding(.all, 24.0)
+//                    .toolbar {
+//
+//                        ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarTrailing) {
+//                            HStack(spacing: 3) {
+//                                NavigationLink {
+//                                    InfoView()
+//                                } label: {
+//                                    Image(systemName: "info.circle.fill")
+//                                        .font(.system(size: 22))
+//            //                            .symbolRenderingMode(.hierarchical)
+//                                        .foregroundStyle(Color.gray)
+//                                }
+//                            }
+//
+//                        }
+//
+//                    }
 
         }
+        
 
         
         

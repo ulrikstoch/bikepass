@@ -17,6 +17,9 @@
 		5C73B08D2B72AFAA0058ECDE /* QuizCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */; };
 		5C73B08F2B72CC1C0058ECDE /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */; };
 		5C7F18042B718D9A00E60D3A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F18032B718D9A00E60D3A /* QuestionView.swift */; };
+		5CB85CB02B9F571500658845 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB85CAF2B9F571500658845 /* LearnView.swift */; };
+		5CB85CB22B9F5B5700658845 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB85CB12B9F5B5700658845 /* InfoView.swift */; };
+		5CB85CB42B9F5D7400658845 /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB85CB32B9F5D7400658845 /* ReviewHandler.swift */; };
 		5CDF612D2A5990C700BF7138 /* BikePassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF612C2A5990C700BF7138 /* BikePassApp.swift */; };
 		5CDF612F2A5990C700BF7138 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF612E2A5990C700BF7138 /* ContentView.swift */; };
 		5CDF61312A5990C800BF7138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF61302A5990C800BF7138 /* Assets.xcassets */; };
@@ -30,6 +33,10 @@
 		5CDF615D2A59919E00BF7138 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF615C2A59919D00BF7138 /* QuizView.swift */; };
 		5CDF615F2A5991B000BF7138 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF615E2A5991B000BF7138 /* SettingsView.swift */; };
 		5CDF61612A59979B00BF7138 /* QuizSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF61602A59979B00BF7138 /* QuizSheetView.swift */; };
+		5CEF7CFE2B9E3334002A1BC6 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF7CFD2B9E3334002A1BC6 /* QuizViewModel.swift */; };
+		5CEF7D002B9E39BC002A1BC6 /* BikePassOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF7CFF2B9E39BC002A1BC6 /* BikePassOwner.swift */; };
+		5CEF7D052B9E4630002A1BC6 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEF7D042B9E4630002A1BC6 /* ConfettiSwiftUI */; };
+		5CEF7D072B9E49F6002A1BC6 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF7D062B9E49F6002A1BC6 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +67,9 @@
 		5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompleteView.swift; sourceTree = "<group>"; };
 		5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		5C7F18032B718D9A00E60D3A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		5CB85CAF2B9F571500658845 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		5CB85CB12B9F5B5700658845 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		5CB85CB32B9F5D7400658845 /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
 		5CDF61292A5990C700BF7138 /* BikePass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikePass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDF612C2A5990C700BF7138 /* BikePassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassApp.swift; sourceTree = "<group>"; };
 		5CDF612E2A5990C700BF7138 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +86,9 @@
 		5CDF615C2A59919D00BF7138 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		5CDF615E2A5991B000BF7138 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5CDF61602A59979B00BF7138 /* QuizSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSheetView.swift; sourceTree = "<group>"; };
+		5CEF7CFD2B9E3334002A1BC6 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		5CEF7CFF2B9E39BC002A1BC6 /* BikePassOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassOwner.swift; sourceTree = "<group>"; };
+		5CEF7D062B9E49F6002A1BC6 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEF7D052B9E4630002A1BC6 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,10 +143,15 @@
 				5CDF61562A5990D400BF7138 /* HomeView.swift */,
 				5C4938802B7D78280013EF32 /* VideoView.swift */,
 				5CDF615C2A59919D00BF7138 /* QuizView.swift */,
+				5CEF7CFD2B9E3334002A1BC6 /* QuizViewModel.swift */,
 				5C7F18032B718D9A00E60D3A /* QuestionView.swift */,
 				5CDF61602A59979B00BF7138 /* QuizSheetView.swift */,
 				5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */,
 				5C4680C82B7BCF180074F40E /* BikePassView.swift */,
+				5CEF7CFF2B9E39BC002A1BC6 /* BikePassOwner.swift */,
+				5CB85CAF2B9F571500658845 /* LearnView.swift */,
+				5CB85CB12B9F5B5700658845 /* InfoView.swift */,
+				5CB85CB32B9F5D7400658845 /* ReviewHandler.swift */,
 				5CDF615E2A5991B000BF7138 /* SettingsView.swift */,
 			);
 			path = Views;
@@ -152,6 +171,7 @@
 		5CDF61202A5990C700BF7138 = {
 			isa = PBXGroup;
 			children = (
+				5CEF7D062B9E49F6002A1BC6 /* Test.swift */,
 				5CDF612B2A5990C700BF7138 /* BikePass */,
 				5CDF613C2A5990C800BF7138 /* BikePassTests */,
 				5CDF61462A5990C800BF7138 /* BikePassUITests */,
@@ -223,6 +243,9 @@
 			dependencies = (
 			);
 			name = BikePass;
+			packageProductDependencies = (
+				5CEF7D042B9E4630002A1BC6 /* ConfettiSwiftUI */,
+			);
 			productName = BikePass;
 			productReference = 5CDF61292A5990C700BF7138 /* BikePass.app */;
 			productType = "com.apple.product-type.application";
@@ -295,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 5CDF61202A5990C700BF7138;
+			packageReferences = (
+				5CEF7D032B9E4630002A1BC6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 5CDF612A2A5990C700BF7138 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,13 +368,19 @@
 			files = (
 				5CDF615F2A5991B000BF7138 /* SettingsView.swift in Sources */,
 				5CDF61572A5990D400BF7138 /* HomeView.swift in Sources */,
+				5CB85CB42B9F5D7400658845 /* ReviewHandler.swift in Sources */,
 				5C73B08F2B72CC1C0058ECDE /* CustomAlertView.swift in Sources */,
+				5CEF7CFE2B9E3334002A1BC6 /* QuizViewModel.swift in Sources */,
+				5CB85CB02B9F571500658845 /* LearnView.swift in Sources */,
+				5CEF7D072B9E49F6002A1BC6 /* Test.swift in Sources */,
 				5CDF615B2A59919100BF7138 /* Quiz.swift in Sources */,
 				5C4938852B7D85240013EF32 /* PrimaryButton.swift in Sources */,
+				5CB85CB22B9F5B5700658845 /* InfoView.swift in Sources */,
 				5CDF61612A59979B00BF7138 /* QuizSheetView.swift in Sources */,
 				5C73B08D2B72AFAA0058ECDE /* QuizCompleteView.swift in Sources */,
 				5CDF61592A59917E00BF7138 /* Question.swift in Sources */,
 				5CDF612F2A5990C700BF7138 /* ContentView.swift in Sources */,
+				5CEF7D002B9E39BC002A1BC6 /* BikePassOwner.swift in Sources */,
 				5CDF612D2A5990C700BF7138 /* BikePassApp.swift in Sources */,
 				5C7F18042B718D9A00E60D3A /* QuestionView.swift in Sources */,
 				5C4680C92B7BCF180074F40E /* BikePassView.swift in Sources */,
@@ -681,6 +713,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5CEF7D032B9E4630002A1BC6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CEF7D042B9E4630002A1BC6 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEF7D032B9E4630002A1BC6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CDF61212A5990C700BF7138 /* Project object */;
 }

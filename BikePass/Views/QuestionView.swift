@@ -29,6 +29,8 @@ struct QuestionView: View {
     @State private var alertTitle: String = ""
     @State private var alertDescription: String = ""
     
+    @State private var isPlaying = false
+    @State private var player: AVPlayer?
     
     
     @Environment(\.presentationMode) var presentationMode
@@ -123,19 +125,36 @@ struct QuestionView: View {
             colorScheme == .dark ? Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all) : Color(UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all)
             ScrollView {
                 VStack(alignment: .leading) {
-                    Image(question.imageName) // Use the image name associated with the question
-                        .resizable()
-                        .scaledToFit()
-                        .cornerRadius(30)
-                        .padding()
                     
-                    //                    VideoPlayer(player: AVPlayer(url: question.videoURL))
-                    //                        .aspectRatio(16/9, contentMode: .fit)
-                    //                        .scaledToFit()
-                    //                        .cornerRadius(30)
-                    //                        .padding()
-                    
-                    
+                    ZStack {
+                        if let player = player {
+                                       VideoPlayer(player: player)
+                                           .aspectRatio(16/9, contentMode: .fit)
+                                           .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                           .padding()
+                                   }
+
+                                if !isPlaying {
+                                    ZStack(alignment: .bottomTrailing) {
+                                        Image(question.imageName)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                            .padding()
+                                            
+                                        Image(systemName: "play.circle.fill")
+                                            .padding([.bottom, .trailing], 24.0)
+                                            .font(.system(size: 56))
+                                            .foregroundColor(Color.white)
+                                    }
+                                    .onTapGesture {
+                                        isPlaying = true
+                                        player?.play()
+                                    }
+         
+                                }
+                            }
+
                     VStack(alignment: .leading) {
                         Text(question.question)
                             .font(.system(size: 25))
@@ -173,7 +192,7 @@ struct QuestionView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(selectedAnswers.contains(index) ? .white : Color(UIColor.label))
                                         .multilineTextAlignment(.leading)
-                                        .lineLimit(2)
+                                        .lineLimit(4)
                                         .fixedSize(horizontal: false, vertical: true)
                                     Spacer()
                                     
@@ -182,7 +201,7 @@ struct QuestionView: View {
                                 .padding()
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                                 .background(selectedAnswers.contains(index) ? Color(red: 0.17, green: 0.34, blue: 0.97) : (colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground)))
-                                .cornerRadius(16)
+                                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             }
                             .padding(.bottom, 2)
                         }
@@ -232,7 +251,7 @@ struct QuestionView: View {
                                     ), lineWidth: 3)
                             )
                             .background(Color(red: 0.17, green: 0.34, blue: 0.97))
-                            .cornerRadius(55)
+                            .clipShape(RoundedRectangle(cornerRadius: 55, style: .continuous))
                             .shadow(color: .black.opacity(0.35), radius: 1.5, x: 0, y: 2)
                         
                         Text("Next")
@@ -254,6 +273,7 @@ struct QuestionView: View {
             .animation(.bouncy, value: buttonOffset)
             .animation(.easeInOut, value: buttonOffset)
             
+            
             if showCustomAlert {
                 CustomAlertView(icon: alertIcon, title: alertTitle, description: alertDescription)
                     .offset(y: alertOffset)
@@ -265,6 +285,10 @@ struct QuestionView: View {
             
             
         }
+        .onAppear {
+                    // Initialize the player when the view appears
+                    self.player = AVPlayer(url: question.videoURL)
+                }
         
         
         
@@ -287,7 +311,7 @@ struct QuestionView_Previews: PreviewProvider {
             correctAnswers: Set([0]),
             selectionType: .multiple,
             imageName: "img_q1",
-            videoURL: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/5c34a4d6ff917aa2a99d037e5ba182cc/manifest/video.m3u8")!
         )
         
         QuestionView(

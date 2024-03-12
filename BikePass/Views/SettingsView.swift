@@ -11,23 +11,35 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("General")) {
+                Section(header: Text("BikePass")) {
+                    
+                    Button("Clear UserDefaults") {
+                        clearUserDefaults()
+                    }
+
+                    
                     NavigationLink(destination: Text("Content of Setting 1")) {
-                        Text("Setting 1")
+                        Text("Name")
                     }
                     NavigationLink(destination: Text("Content of Setting 2")) {
                         Text("Setting 2")
                     }
                 }
                 Section(header: Text("Account")) {
-                    NavigationLink(destination: Text("Content of Account Setting 1")) {
-                        Text("Account Setting 1")
+                    NavigationLink(destination: InfoView()) {
+                        Text("About")
                     }
                 }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings", displayMode: .inline)
         }
+    }
+}
+
+func clearUserDefaults() {
+    if let appDomain = Bundle.main.bundleIdentifier {
+        UserDefaults.standard.removePersistentDomain(forName: appDomain)
     }
 }
 

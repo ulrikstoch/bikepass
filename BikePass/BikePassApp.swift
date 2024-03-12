@@ -9,10 +9,26 @@ import SwiftUI
 
 @main
 struct BikePassApp: App {
+    
+    @StateObject var viewModel = QuizViewModel()
+    
+    
     var body: some Scene {
+        
+        
         WindowGroup {
-            ContentView()
+            if viewModel.quizCompleted {
+                BikePassOwner()
+            } else {
+                ContentView()
+            }
         }
+        
+//        WindowGroup {
+//           
+//                ContentView()
+//            
+//        }
     }
 }
 

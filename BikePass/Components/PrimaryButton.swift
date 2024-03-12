@@ -44,7 +44,7 @@ struct PrimaryButton: View {
                     colorScheme == .dark ? darkModeGradient : lightModeGradient
                 )
             
-                .cornerRadius(20)
+                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
             
             Button(action: action, label: {
@@ -77,7 +77,7 @@ struct PrimaryButton: View {
                                 ), lineWidth: 3)
                         )
                         .background(Color(red: 0.17, green: 0.34, blue: 0.97))
-                        .cornerRadius(15)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                         .shadow(color: .black.opacity(0.35), radius: 1.5, x: 0, y: 2)
                     
                     
@@ -103,6 +103,6 @@ struct PrimaryButton: View {
         // This is where you define what the button should do when tapped.
         // For preview purposes, this can be left empty or just print a message.
         print("Button tapped")
-    }, label: "Start Quiz")
+    }, label: "Start test")
     .previewLayout(.sizeThatFits)
 }

@@ -13,14 +13,20 @@ struct QuizCompleteView: View {
 
     @State private var imageScale: CGFloat = 0.2 // Start with a scaled-down image
     @State private var textOpacity: Double = 0 // Start with invisible text and button
+    @State private var fieldOpacity: Double = 0 // Start with invisible text and button
+    @State private var buttonOpacity: Double = 0 // Start with invisible text and button
+    @ObservedObject var viewModel: QuizViewModel
+
+
+//    var viewModel: QuizViewModel
     var dismissAction: () -> Void
     
     
     var body: some View {
+        
         VStack {
             Spacer()
             Image(colorScheme == .dark ? "complete_dark" : "complete_light")
-                .padding(.bottom)
                 .scaleEffect(imageScale)
                 .onAppear {
                     withAnimation(.bouncy(duration: 0.6)) {
@@ -29,22 +35,63 @@ struct QuizCompleteView: View {
                     withAnimation(.easeIn(duration: 1).delay(0.4)) {
                         textOpacity = 1 // Fade in text and button after the image scales
                     }
+                    withAnimation(.easeIn(duration: 1).delay(0.6)) {
+                        fieldOpacity = 1 // Fade in text and button after the image scales
+                    }
+                    withAnimation(.easeIn(duration: 1).delay(1)) {
+                        buttonOpacity = 1 // Fade in text and button after the image scales
+                    }
                 }
             
-            Text("Congratulations!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-                .padding(.bottom)
-                .opacity(textOpacity)
+            VStack(spacing: 8) {
+                Text("Test completed!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .opacity(textOpacity)
+                
+                Text("We look forward to seeing you on the bike lanes of Copenhagen.")
+                    .font(.subheadline)
+                    .foregroundColor(Color.gray)
+                    .multilineTextAlignment(.center)
+    //                .padding(.bottom, 40.0)
+                    .lineLimit(2)
+                    .padding(.horizontal, 32.0)
+                    .opacity(textOpacity)
+            }
+
+//
             
-            Text("You answered all questions correctly. We look forward to seeing you on the bike lanes of Copenhagen.")
-                .font(.subheadline)
-                .multilineTextAlignment(.center)
-                .opacity(textOpacity)
+
             
             Spacer()
+            TextField("Please enter your full name", text: $viewModel.userName)
+                .textContentType(.name)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                .opacity(fieldOpacity)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        if !viewModel.userName.isEmpty {
+                            Button(action: {
+                                viewModel.userName = ""
+                            }) {
+                                Image(systemName: "multiply.circle.fill")
+                                    .foregroundColor(.gray)
+                                    .padding()
+                            }
+                        }
+                        
+                    }
+                    .opacity(fieldOpacity)
+                )
+//                .padding(.bottom)
+
+
             Button(action: {
+                viewModel.quizCompleted = true
                 dismissAction()
             }, label: {
                 
@@ -76,7 +123,7 @@ struct QuizCompleteView: View {
                             ), lineWidth: 3)
                       )
                       .background(Color(red: 0.17, green: 0.34, blue: 0.97))
-                      .cornerRadius(15)
+                      .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                       .shadow(color: .black.opacity(0.35), radius: 1.5, x: 0, y: 2)
 
                       
@@ -85,22 +132,33 @@ struct QuizCompleteView: View {
                     
                     Text("Show BikePass")
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundColor(viewModel.userName.isEmpty ? Color.white.opacity(0.2) : Color.white)
                     
                     
                 }
-                .opacity(textOpacity)
+                .disabled(viewModel.userName.isEmpty)
+                .opacity(buttonOpacity)
             })
-            .padding(.horizontal, 5)
+//            .padding(.horizontal, 5)
+            .padding(.bottom)
+            
             
         }
+//        .navigationViewStyle(.stack)
         .navigationBarBackButtonHidden(true)
         .padding(.horizontal)
     }
 }
 
-#Preview {
-    QuizCompleteView(dismissAction: {
-        print("Dismiss action triggered")
-    })
+struct QuizCompleteView_Previews: PreviewProvider {
+    static var previews: some View {
+        // Create an instance of QuizViewModel
+        let viewModel = QuizViewModel()
+
+        // Pass the viewModel to QuizCompleteView
+        QuizCompleteView(viewModel: viewModel, dismissAction: {
+            print("Dismiss action triggered")
+        })
+    }
 }
+

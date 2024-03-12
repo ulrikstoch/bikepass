@@ -11,11 +11,12 @@ import SwiftUI
 struct QuizSheetView: View {
     @Environment(\.presentationMode) var presentationMode
     let quiz: Quiz
-    @State private var currentQuestionIndex = 0
+    @State private var currentQuestionIndex = 7
     // Define a state to manage explicit navigation link activation
     @State private var activeLink: Int? = nil
     @State private var showQuizCompleteView = false
     @Environment(\.colorScheme) var colorScheme
+    var viewModel: QuizViewModel
     var dismissAction: () -> Void // Add this line
 
     var body: some View {
@@ -47,7 +48,7 @@ struct QuizSheetView: View {
                 }
             }
             .sheet(isPresented: $showQuizCompleteView) {
-                QuizCompleteView(dismissAction: dismissAction)
+                QuizCompleteView(viewModel: viewModel, dismissAction: dismissAction)
             }
             
         }
@@ -64,7 +65,7 @@ struct QuizSheetView: View {
             }
         } else {
             // When index equals quiz.questions.count, show the QuizCompleteView
-            QuizCompleteView(dismissAction: dismissAction)
+            QuizCompleteView(viewModel: viewModel, dismissAction: dismissAction)
         }
     }
 
@@ -78,9 +79,16 @@ struct QuizSheetView: View {
 
 struct QuizSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        // Define a mock dismissAction for the preview
-        QuizSheetView(quiz: quiz, dismissAction: {
+        // Create an instance of QuizViewModel
+        let viewModel = QuizViewModel()
+
+        // Define a mock quiz for the preview
+        let mockQuiz = Quiz(questions: [/* your mock questions here */])
+
+        // Pass the viewModel to QuizSheetView
+        QuizSheetView(quiz: mockQuiz, viewModel: viewModel, dismissAction: {
             print("Dismiss action for preview")
         })
     }
 }
+

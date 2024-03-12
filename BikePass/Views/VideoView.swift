@@ -44,6 +44,10 @@ struct VideoView: View {
                             
                             VideoPlayer(player: thumbnailPlayer)
                                 .onAppear {
+                                    let audioSession = AVAudioSession.sharedInstance()
+                                    try? audioSession.setCategory(.ambient)
+                                    try? audioSession.setActive(true)
+
                                     thumbnailPlayer.play()
                                     NotificationCenter.default.addObserver(
                                         forName: .AVPlayerItemDidPlayToEndTime,
@@ -77,7 +81,7 @@ struct VideoView: View {
                                 .foregroundColor(Color.white)
                             
                         }
-                        .cornerRadius(30)
+                        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                     })
                     .sheet(isPresented: $showVideoPlayer) {
                         VideoPlayerView(showButton: $showButton)
@@ -131,7 +135,7 @@ struct VideoView: View {
             }
 
         }
-        
+        .toolbarRole(.editor)
         
 
         
