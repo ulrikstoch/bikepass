@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVKit
+import VTabView
 
 struct LearnView: View {
     
@@ -14,170 +15,151 @@ struct LearnView: View {
     @State private var showButton = false
     @State private var navigateToQuizView = false
     @Environment(\.colorScheme) var colorScheme
-//    @Binding var showQuizView: Bool
+    @State var selectedTabIndex: Int = 0
+    
+    //    @Binding var showQuizView: Bool
     private let thumbnailPlayer = AVPlayer(url: Bundle.main.url(forResource: "video_thumb", withExtension: "mp4")!)
     
     var body: some View {
-
+        //
+        //        NavigationStack {
+        
         NavigationStack {
-//            ScrollView(.vertical, showsIndicators: false) {
-//                VStack(spacing: 0) {
-//                    ForEach(rules.indices, id: \.self) { index in
-//                        VStack {
-//                            Text(rules[index].emoji)
-//                                .font(.largeTitle)
-//                            Text(rules[index].title)
-//                                .font(.title)
-//                            Text(rules[index].description)
-//                                .padding()
-//                        }
-//                        .frame(width: UIScreen.main.bounds.width, height: 600)
-//                        .background(Color.white)
-//                        .clipShape(RoundedRectangle(cornerRadius: 30))
-//                        .scrollTargetLayout()
-//                    }
-//                }
-//
-//            }
-//            .scrollTargetBehavior(.viewAligned)
-            
-            
-            ScrollView {
+            ZStack(alignment: .bottomTrailing) {
                 
-                
-                
-                VStack(spacing: 24) {
+                VTabView(selection: $selectedTabIndex, indexPosition: .trailing) {
                     
-                    
-                    VStack {
-                        TabView {
-                            ForEach(rules.indices, id: \.self) { index in
-                                VStack(alignment: .leading) {
-                                    VStack(alignment: .leading) {
-                                        HStack {
-                                            Text(rules[index].title)
-                                                .fontWeight(.bold)
-                                                .multilineTextAlignment(.leading)
-                                                .padding(.bottom, 4.0)
-                                                .font(.system(size: 18))
+                    GeometryReader { geometry in
+                        VStack(alignment: .leading, spacing: 0) {
+                            
+                            
+                            Button(action: {
+                                
+                                showVideoPlayer = true
+                                
+                            }, label: {
+                                ZStack(alignment: .bottomTrailing) {
+                                    VideoPlayer(player: thumbnailPlayer)
+                                        .onAppear {
+                                            let audioSession = AVAudioSession.sharedInstance()
+                                            try? audioSession.setCategory(.ambient)
+                                            try? audioSession.setActive(true)
                                             
-                                            Text(rules[index].emoji)
-                                                .padding(.bottom, 4.0)
-                                                .font(.system(size: 32))
+                                            thumbnailPlayer.play()
+                                            NotificationCenter.default.addObserver(
+                                                forName: .AVPlayerItemDidPlayToEndTime,
+                                                object: thumbnailPlayer.currentItem,
+                                                queue: .main) { _ in
+                                                    // Seek to the start
+                                                    thumbnailPlayer.seek(to: CMTime.zero)
+                                                    // Play the video again
+                                                    thumbnailPlayer.play()
+                                                }
                                         }
-//
-
-                                        Text(rules[index].description)
-                                            .fontWeight(.regular)
-                                            .multilineTextAlignment(.leading)
-                                            .padding(.bottom)
-                                            .font(.system(size: 32))
-                                    }
+                                    
+                                    
+                                        .aspectRatio(500/690, contentMode: .fit)
+                                        .overlay(
+                                            Rectangle()
+                                                .foregroundColor(.clear)
+                                                .background(
+                                                    LinearGradient(
+                                                        stops: [
+                                                            Gradient.Stop(color: .black.opacity(0), location: 0.0),
+                                                            Gradient.Stop(color: .black.opacity(0.3), location: 1.0),
+                                                        ],
+                                                        startPoint: UnitPoint(x: 0.5, y: 0),
+                                                        endPoint: UnitPoint(x: 0.5, y: 1)
+                                                    )
+                                                ),
+                                            alignment: .bottomTrailing
+                                        )
+                                    
+                                    Image(systemName: "play.circle.fill")
+                                        .padding([.bottom, .trailing])
+                                        .font(.system(size: 68))
+                                        .foregroundColor(Color.white)
+                                    
                                 }
-
+                                
+                                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                            })
+                            .padding(.top, 16)
+                            .padding(.bottom, 40)
+                            .sheet(isPresented: $showVideoPlayer) {
+                                VideoPlayerView(showButton: $showButton)
                             }
+                            
+                            Text("Safety rules")
+                                .font(.system(size: 18))
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.gray)
+                                .multilineTextAlignment(.leading)
+                                .padding(.bottom, 6.0)
+                            
+                            Text("Refresh the safety rules by watching this video or keep scrolling ↓")
+                                .font(.system(size: 28))
+                                .multilineTextAlignment(.leading)
+                                .frame(width: geometry.size.width * 0.9, alignment: .leading)
+                            Spacer()
+                            
                         }
-                        .tabViewStyle(PageTabViewStyle())
-                        .indexViewStyle(.page(backgroundDisplayMode: .always))
                     }
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
-                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .frame(height: 400)
-
                     
-                    VStack(alignment: .leading) {
+                    .padding(.horizontal, 24.0)
+                    .tag(0)
+                    
+                    ForEach(rules.indices, id: \.self) { index in
+                        GeometryReader { geometry in
+                            VStack(alignment: .leading, spacing: 0) {
+                                Image(rules[index].imageName)
+                                    .resizable()
+                                    .aspectRatio(1/1, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                    .scaledToFit()
+                                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                    .padding(.bottom, 40)
+                                    .padding(.top, 16)
+                                    .padding(.horizontal, 24.0)
+                                
+                                Text(rules[index].title)
+                                    .font(.system(size: 18))
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.gray)
+                                    .multilineTextAlignment(.leading)
+                                    .padding(.bottom, 6.0)
+                                    .padding(.leading, 24.0)
+                                Text(rules[index].description)
+                                    .font(.system(size: 28))
+                                    .multilineTextAlignment(.leading)
+                                    .frame(width: geometry.size.width * 0.8, alignment: .leading)
+                                    .padding(.leading, 24.0)
+                                
+                                Spacer()
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                        }
+                        .tag(index + 1)
                         
-//                        Text("Watch the video again")
-//                            .fontWeight(.semibold)
-//                        
-                        Button(action: {
-                            
-                            showVideoPlayer = true
-                            
-                        }, label: {
-                            ZStack(alignment: .bottomTrailing) {
-                                VideoPlayer(player: thumbnailPlayer)
-                                    .onAppear {
-                                        let audioSession = AVAudioSession.sharedInstance()
-                                        try? audioSession.setCategory(.ambient)
-                                        try? audioSession.setActive(true)
-
-                                        thumbnailPlayer.play()
-                                        NotificationCenter.default.addObserver(
-                                            forName: .AVPlayerItemDidPlayToEndTime,
-                                            object: thumbnailPlayer.currentItem,
-                                            queue: .main) { _ in
-                                                // Seek to the start
-                                                thumbnailPlayer.seek(to: CMTime.zero)
-                                                // Play the video again
-                                                thumbnailPlayer.play()
-                                            }
-                                    }
-                                    .aspectRatio(500/690, contentMode: .fit)
-                                
-                                Rectangle()
-                                    .foregroundColor(.clear)
-                                    .background(
-                                        LinearGradient(
-                                            stops: [
-                                                Gradient.Stop(color: .black.opacity(0), location: 0.00),
-                                                Gradient.Stop(color: .black.opacity(0.3), location: 1.00),
-                                            ],
-                                            startPoint: UnitPoint(x: 0.5, y: 0),
-                                            endPoint: UnitPoint(x: 0.5, y: 1)
-                                        ))
-                                //                                    .background(.black.opacity(0.3))
-                                
-                                Image(systemName: "play.circle.fill")
-                                    .padding([.bottom, .trailing])
-                                    .font(.system(size: 68))
-                                    .foregroundColor(Color.white)
-                                
-                            }
-                            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                        })
-                        .sheet(isPresented: $showVideoPlayer) {
-                            VideoPlayerView(showButton: $showButton)
-                        }
+                        
                     }
-                    .padding(.top, 20.0)
                     
-
-                    
-//                    VStack(alignment: .leading) {
-//                        VStack(alignment: .center) {
-//                            Text("🚴")
-//                                .padding(.bottom, 4.0)
-//                                .font(.system(size: 50))
-//                            Text("Stay on the Right")
-//                                .fontWeight(.bold)
-//                                .multilineTextAlignment(.center)
-//                                .padding(.bottom, 4.0)
-//                            Text("Always cycle on the right-hand side of roads and bike paths to align with traffic flow and ensure safety.")
-//                                .fontWeight(.regular)
-//                                .multilineTextAlignment(.center)
-//                                .padding(.bottom)
-//                        }
-//                    }
-//                    .padding()
-//                    .frame(maxWidth: .infinity)
-//                    .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
-//                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 }
-                .padding(.horizontal)
+                //                .tabViewStyle(PageTabViewStyle())
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .indexViewStyle(.page(backgroundDisplayMode: .never))
                 
+                CustomPageControl(numberOfPages: rules.count + 1, currentPage: $selectedTabIndex)
+                    .frame(width: 0, height: 0)  // Adjust width and height as needed
+                    .rotationEffect(.degrees(90))  // Rotate 90 degrees
+                    .offset(x: -28, y: -90)
                 
             }
-            .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
-            .navigationTitle("Safety Rules")
-
+            
             
         }
-
-        
+        .navigationTitle("Safety rules")
         
     }
 }
@@ -186,22 +168,71 @@ struct LearnView: View {
     LearnView()
 }
 
+struct CustomPageControl: UIViewRepresentable {
+    
+    let numberOfPages: Int
+    @Binding var currentPage: Int
+    
+    func makeUIView(context: Context) -> UIPageControl {
+        let view = UIPageControl()
+        view.numberOfPages = numberOfPages
+        view.backgroundStyle = .prominent
+        view.addTarget(context.coordinator, action: #selector(Coordinator.pageChanged), for: .valueChanged)
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIPageControl, context: Context) {
+        uiView.numberOfPages = numberOfPages
+        uiView.currentPage = currentPage
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject {
+        var parent: CustomPageControl
+        
+        init(_ parent: CustomPageControl) {
+            self.parent = parent
+        }
+        
+        @objc func pageChanged(sender: UIPageControl) {
+            parent.currentPage = sender.currentPage
+        }
+    }
+}
+
 struct CyclingRule {
-    let emoji: String
     let title: String
     let description: String
+    let imageName: String
 }
 
 let rules = [
-    CyclingRule(emoji: "🚴", title: "Stay on the Right", description: "Ride on the right-hand side to match traffic direction and ensure safety."),
-    CyclingRule(emoji: "🚷", title: "No Biking in Walk Zones", description: "Sidewalks and crosswalks are for pedestrians, so keep your bike off these areas."),
-    CyclingRule(emoji: "🚦", title: "Follow Lights", description: "Obey red lights and follow the signals for cars if there's no bike light."),
-    CyclingRule(emoji: "↩️", title: "Left Turn Steps", description: "To turn left, stop at the intersection's edge, then go when it's green."),
-    CyclingRule(emoji: "🚌", title: "Wait for Buses", description: "Stop for boarding or alighting bus passengers before you proceed."),
-    CyclingRule(emoji: "✋", title: "Keep in Control", description: "Ride with a hand on the handlebar and both feet on pedals for stability."),
-    CyclingRule(emoji: "📵", title: "No Phones or Drunk Riding", description: "Avoid using your phone or biking under the influence to prevent accidents."),
-    CyclingRule(emoji: "🚲", title: "Bike Lanes for Bikes", description: "Stick to bike lanes for cycling and step off to walk with your bike."),
-    CyclingRule(emoji: "💡", title: "Light Up", description: "Use proper lighting on your bike during dark hours or low visibility."),
-    CyclingRule(emoji: "👶", title: "Carry Safely", description: "Ensure safe and proper carriage of items or passengers on your bike."),
-    CyclingRule(emoji: "🔁", title: "Pass Carefully", description: "Overtake or ride alongside others only with enough room and safely.")
+    CyclingRule(title: NSLocalizedString("rule1_title", comment: ""),
+                description: NSLocalizedString("rule1_description", comment: ""),
+                imageName: "img_r1"),
+    CyclingRule(title: NSLocalizedString("rule2_title", comment: ""),
+                description: NSLocalizedString("rule2_description", comment: ""),
+                imageName: "img_r2"),
+    CyclingRule(title: NSLocalizedString("rule3_title", comment: ""),
+                description: NSLocalizedString("rule3_description", comment: ""),
+                imageName: "img_r3"),
+    CyclingRule(title: NSLocalizedString("rule4_title", comment: ""),
+                description: NSLocalizedString("rule4_description", comment: ""),
+                imageName: "img_r4"),
+    CyclingRule(title: NSLocalizedString("rule5_title", comment: ""),
+                description: NSLocalizedString("rule5_description", comment: ""),
+                imageName: "img_r5"),
+    CyclingRule(title: NSLocalizedString("rule6_title", comment: ""),
+                description: NSLocalizedString("rule6_description", comment: ""),
+                imageName: "img_r6"),
+    CyclingRule(title: NSLocalizedString("rule7_title", comment: ""),
+                description: NSLocalizedString("rule7_description", comment: ""),
+                imageName: "img_r7"),
+    CyclingRule(title: NSLocalizedString("rule8_title", comment: ""),
+                description: NSLocalizedString("rule8_description", comment: ""),
+                imageName: "img_r8")
 ]
+

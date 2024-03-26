@@ -8,6 +8,24 @@
         "revision" : "f45961f97bbae6fff6e2e64546fea0189425ad92",
         "version" : "1.1.0"
       }
+    },
+    {
+      "identity" : "swiftclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TelemetryDeck/SwiftClient",
+      "state" : {
+        "revision" : "d20ccc4b8266cf739eede58cdfc7e9c6ffb41cda",
+        "version" : "1.5.1"
+      }
+    },
+    {
+      "identity" : "swiftui-vertical-tab-view",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lorenzofiamingo/swiftui-vertical-tab-view",
+      "state" : {
+        "revision" : "e029f75f9c43e52e351528a78e293a997200b9f8",
+        "version" : "2.0.0"
+      }
     }
   ],
   "version" : 2

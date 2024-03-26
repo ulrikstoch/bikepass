@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @State private var showVideoView = false
-//    @State private var showQuizView = false
-//    @State private var fadeTransition = false
-    
     
     var body: some View {
         
@@ -25,42 +21,14 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview("English") {
+    ContentView()
+        .environment(\.locale, Locale(identifier: "EN"))
 }
 
-//ZStack {
-//    HomeView(showVideoView: $showVideoView, fadeTransition: $fadeTransition)
-//    
-//    if showVideoView {
-//        VideoView(showQuizView: $showQuizView)
-//    }
-//    
-//    if showQuizView {
-//        QuizView(quiz: quiz)
-//    }
-//}
 
+#Preview("Danish") {
+    ContentView()
+        .environment(\.locale, Locale(identifier: "da_DK"))
+}
 
-
-//        TabView {
-//            HomeView()
-//                .tabItem {
-//                    Image(systemName: "house")
-//                    Text("Home")
-//                }
-//
-//            QuizView(quiz: quiz) // You need to pass your questions here
-//                .tabItem {
-//                    Image(systemName: "checklist")
-//                    Text("Quiz")
-//                }
-//
-//            BikePassView()
-//                .tabItem {
-//                    Image(systemName: "menucard.fill")
-//                    Text("Pass")
-//                }
-//        }

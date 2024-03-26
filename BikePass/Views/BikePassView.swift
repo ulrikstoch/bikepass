@@ -10,18 +10,46 @@ import CoreMotion
 import CoreHaptics
 import ConfettiSwiftUI
 import Combine
+
+
+struct CircularTextView: View {
+    let text: String
+    @State private var rotationAngle: Double = 330
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                ForEach(0..<text.count, id: \.self) { index in
+                    let character = Array(text)[index]
+                    Text(String(character))
+                        .position(x: geometry.size.width / 2, y: 67) // Adjust y to move the text up or down
+                        .rotationEffect(.degrees(Double(index) * 360 / Double(text.count)), anchor: .center)
+                }
+            }
+            .rotationEffect(.degrees(rotationAngle))
+            .onAppear {
+                withAnimation(Animation.linear(duration: 120).repeatForever(autoreverses: false)) {
+                    rotationAngle = -360
+                }
+            }
+        }
+    }
+}
+
+
+
 //
 //
 class MotionManager: ObservableObject {
     private var motionManager = CMMotionManager()
-
+    
     @Published var pitch: Double = 0 // Tilt forward/backward
     @Published var roll: Double = 0 // Tilt left/right
-
+    
     init() {
         startMotionUpdates()
     }
-
+    
     func startMotionUpdates() {
         if motionManager.isDeviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
@@ -33,114 +61,151 @@ class MotionManager: ObservableObject {
         }
     }
 }
-//
-//class MotionManager: ObservableObject {
-//    private var motionManager = CMMotionManager()
-//    @Published var roll: Double = 0.0
-//    @Published var pitch: Double = 0.0
-//
-//    init() {
-//        startMotionUpdates()
-//    }
-//
-//    func startMotionUpdates() {
-//        if motionManager.isGyroAvailable {
-//            motionManager.gyroUpdateInterval = 1.0 / 60.0
-//            motionManager.startGyroUpdates(to: .main) { [weak self] (gyroData, error) in
-//                guard let data = gyroData else { return }
-//                self?.roll = data.rotationRate.x
-//                self?.pitch = data.rotationRate.y
-//            }
-//        }
-//    }
-//}
+
+
+
 
 struct BikePassView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var motionManager = MotionManager()
     @State private var dragState = CGSize.zero
     @State private var isTouching: Bool = false // Tracks whether the user is currently touching the screen
-    @State private var rotationAngleX: Double = 0
-    @State private var rotationAngleY: Double = 0
     @State private var isFirstTime = !UserDefaults.standard.bool(forKey: "hasSeenConfetti")
-//    @State private var scale: CGFloat = 0.25  // Initial scale
-//    @State private var opacity: Double = 0    // Initial opacity
-    @State private var scale: CGFloat = 1.0  // Initial scale
-    @State private var opacity: Double = 1.0    // Initial opacity
-
+    @State private var scale: CGFloat = 0.25  // Initial scale
+    @State private var opacity: Double = 0    // Initial opacity
+    @State private var verticalOffset: CGFloat = 600 // Start from off-screen below
+    @State private var rotationAngleX: Double = -50 // Example starting angle
+    @State private var rotationAngleY: Double = 0 // Example starting angle
+    @State private var hapticEngine: CHHapticEngine?
+    @State private var confettiCounter = 0
+    @State private var highlightPosition = CGPoint.zero
+    @State private var scaleCircle: CGFloat = 1.0
+    
+    
+    
+    
+    
     @ObservedObject var viewModel: QuizViewModel
     
     let bikePassID: String
     let issueDate: String
     
+    
+    
     private var dynamicGradient: LinearGradient {
-            LinearGradient(
-                gradient: Gradient(colors: [.red, .orange, .yellow, .green, .blue, .purple]),
-                startPoint: UnitPoint(x: 0.5 - (motionManager.roll / 50), y: 0.5 - (motionManager.pitch / 50)),
-                endPoint: UnitPoint(x: 0.5 + (motionManager.roll / 50), y: 0.5 + (motionManager.pitch / 50))
-            )
-        }
-       
+        LinearGradient(
+            gradient: Gradient(colors: [Color(hex: "#2A57F7"), Color(hex: "#A3B7FF"), Color(hex: "#2A57F7")]),
+            startPoint: UnitPoint(x: max(min(0 - (motionManager.roll / 1), 1), 0), y: 0),
+            endPoint: UnitPoint(x: max(min(0.5 + (motionManager.roll / 1), 10), 0), y: 0)
+        )
+    }
+    
+    
+    
     
     var body: some View {
         GeometryReader { geometry in
+            
+            
             ZStack(alignment: .center) {
                 colorScheme == .dark ? Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all) : Color(UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all)
                 
+                //                VStack {
                 
-                
-                VStack {
-                    HStack(alignment: .center) {
-                        VStack(alignment: .leading) {
-
-                            Text("CPH BikePass")
-                                .fontWeight(.semibold)
-                                .foregroundStyle(dynamicGradient)
-                                .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
+                ZStack {
+                    Image("pattern")
+                        .frame(width: 300, height: 300)
+                        .rotationEffect(Angle(radians: -motionManager.roll / 5))
+                    
+                    Image("highlight")
+                    //                        .frame(width: 300, height: 300)
+                        .position(highlightPosition)
+                        .colorMultiply(.white)
+                        .blendMode(.overlay)
+                    //                        .opacity(0.8)
+                        .blur(radius: (60))
+                    
+                    VStack {
+                        HStack(alignment: .center) {
+                            VStack(alignment: .leading) {
                                 
-                            Text(bikePassID)
-                                .fontWeight(.regular)
-                                .foregroundColor(Color(red: 0.57, green: 0.57, blue: 0.57))
-                                .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
+                                Text(viewModel.userName)
+                                //                                .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(dynamicGradient)
+                                    .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
+                                Text(viewModel.userCountryWithoutEmoji)
+                                    .fontWeight(.regular)
+                                    .foregroundColor(Color(red: 0.57, green: 0.57, blue: 0.57))
+                                    .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
+                                
+                                
+                            }
                             
-
-                        }
-
-                        Spacer()
-                        Image("badge")
-                    }
-                    
-                    Image("center_circle")
-                        .resizable()
-                        .scaledToFit()
-                    Spacer()
-                    HStack() {
-                        VStack(alignment: .leading) {
                             
-                            Text(viewModel.userName)
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                                .multilineTextAlignment(.leading)
-//                                .lineLimit(2)
-                                .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
-                            Text("Valid from \(issueDate)")
-                                .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.6))
-                                .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
+                            Spacer()
+                            Image("badge")
                         }
+                        
+                        
+                        ZStack {
+                            Image("center_circle")
+                                .resizable()
+                                .scaledToFit()
+                            
+                            
+                            CircularTextView(text: "Official CPH BikePass ·  \(viewModel.bikePassID) · ")
+                                .font(.system(size: 10))
+                                .textCase(.uppercase)
+                                .foregroundColor(Color(red: 0.11, green: 0.21, blue: 0.53).opacity(0.57))
+                                .shadow(color: .white.opacity(0.20), radius: 0, x: 0, y: 1)
+                            
+                        }
+                        .scaleEffect(scaleCircle)
+                        .gesture(
+                            DragGesture(minimumDistance: 0)
+                                .onChanged({ _ in
+                                    withAnimation(.easeIn(duration: 0.4)) {
+                                        scaleCircle = 0.9 // Scale down when tap begins
+                                    }
+                                })
+                                .onEnded({ _ in
+                                    withAnimation(.bouncy(duration: 0.4, extraBounce: 0.5)) {
+                                        scaleCircle = 1.0 // Ensure it scales back to normal when the gesture ends
+                                        confettiCounter += 1
+                                        let generator = UIImpactFeedbackGenerator(style: .soft)
+                                        generator.impactOccurred()
+                                    }
+                                })
+                        )
+                        
+                        
                         Spacer()
+                        HStack() {
+                            VStack(alignment: .leading) {
+                                
+                                Text("CPH BikePass")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
+                                //                                .lineLimit(2)
+                                    .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
+                                Text("Valid from \(issueDate)")
+                                    .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.6))
+                                    .shadow(color: .white.opacity(0.50), radius: 0, x: 0, y: 1)
+                            }
+                            Spacer()
+                        }
                     }
-                    
-                    
                 }
-                
-                
                 
                 .padding([.leading, .bottom, .trailing], 24.0)
                 .padding(.top, 17.0)
                 
                 .foregroundColor(.clear)
                 .frame(height: 500)
+                
                 .background(
                     LinearGradient(
                         stops: [
@@ -152,16 +217,64 @@ struct BikePassView: View {
                     )
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-                .scaleEffect(scale)     // Apply scaling
-                                .opacity(opacity)       // Apply opacity
-                                .onAppear {
-                                    if isFirstTime {
-                                        withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0)) {
-                                            scale = 1.0  // End scale
-                                            opacity = 1.0  // End opacity
-                                        }
-                                    }
-                                }
+                .offset(y: verticalOffset)
+                //                .scaleEffect(scale)     // Apply scaling
+                .opacity(opacity)       // Apply opacity
+                .onAppear {
+                    if isFirstTime {
+                        
+                        do {
+                            self.hapticEngine = try CHHapticEngine()
+                            try self.hapticEngine?.start()
+                        } catch {
+                            print("Error starting the haptic engine: \(error)")
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            
+                            let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.1)
+                            var events = [CHHapticEvent]()
+                            
+                            for i in stride(from: 0, to: 0.8, by: 0.02) {
+                                // Gradually increase the intensity for each event
+                                let intensityValue = Float(i) / 0.5 // Scale the intensity based on the loop variable
+                                let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: intensityValue)
+                                let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: i)
+                                events.append(event)
+                            }
+                            
+                            do {
+                                let pattern = try CHHapticPattern(events: events, parameters: [])
+                                let player = try hapticEngine?.makePlayer(with: pattern)
+                                try player?.start(atTime: 0)
+                            } catch {
+                                print("Pattern Playback Error: \(error)")
+                            }
+                            
+                            
+                            
+                            withAnimation(.spring(response: 0.8, dampingFraction: 0.7)) {
+                                //                                scale = 1.0  // End scale
+                                opacity = 1.0  // End opacity
+                                verticalOffset = 0 // Move to its original position
+                                rotationAngleX = 0 // End rotation X
+                                rotationAngleY = 0 // End rotation Y
+                            }
+                            
+                            UserDefaults.standard.set(true, forKey: "hasSeenConfetti")
+                            isFirstTime = false
+                        }
+                        
+                    }
+                    else {
+                        scale = 1.0
+                        opacity = 1.0
+                        verticalOffset = 0 // Move to its original position
+                        rotationAngleX = 0 // End rotation X
+                        rotationAngleY = 0 // End rotation Y
+                    }
+                }
+                
                 .rotation3DEffect(Angle(degrees: rotationAngleX), axis: (x: 1, y: 0, z: 0))
                 .rotation3DEffect(Angle(degrees: rotationAngleY), axis: (x: 0, y: 1, z: 0))
                 .gesture(
@@ -178,8 +291,13 @@ struct BikePassView: View {
                                 
                                 // Adjust the tilt based on the tap location
                                 // Sensitivity adjustments might be necessary
-                                self.rotationAngleX = Double(-offsetY * 6) // Tilt vertically
+                                self.rotationAngleX = Double(-offsetY * 6) // Tilt verticallya
                                 self.rotationAngleY = Double(offsetX * 6) // Tilt horizontally
+                                
+                                let contentCenter = CGPoint(x: geometry.size.width / 2.5, y: geometry.size.height / 3)
+                                let diffX = contentCenter.x - value.location.x
+                                let diffY = contentCenter.y - value.location.y
+                                highlightPosition = CGPoint(x: contentCenter.x + diffX, y: contentCenter.y + diffY)
                             }
                             
                         }
@@ -187,6 +305,7 @@ struct BikePassView: View {
                             withAnimation {
                                 self.rotationAngleX = 0
                                 self.rotationAngleY = 0
+                                highlightPosition = CGPoint(x: geometry.size.width / 2.5, y: geometry.size.height / 3)
                             }
                         }
                 )
@@ -198,8 +317,21 @@ struct BikePassView: View {
                 .shadow(color: .black.opacity(0.05), radius: 43.5, x: 0, y: 36)
                 .padding(.horizontal, 24)
                 
+                ConfettiCannon(counter: $confettiCounter,
+                               num: 50, confettiSize: 10,
+                               rainHeight: 400,
+                               openingAngle: Angle(degrees: 60),
+                               closingAngle: Angle(degrees: 120),
+                               radius: 400
+                )
+            }
+            
+            .onAppear {
+                // Correctly center the highlight image when the view appears
+                highlightPosition = CGPoint(x: geometry.size.width / 2.5, y: geometry.size.height / 3)
             }
         }
+        
     }
 }
 
@@ -211,4 +343,21 @@ struct BikePassView_Previews: PreviewProvider {
         return BikePassView(viewModel: viewModel, bikePassID: "DK48275024", issueDate: "March 10, 2024")
     }
 }
+
+
+extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet(charactersIn: "#"))
+        let scanner = Scanner(string: hex)
+        var rgbValue: UInt64 = 0
+        scanner.scanHexInt64(&rgbValue)
+        
+        let r = Double((rgbValue & 0xFF0000) >> 16) / 255.0
+        let g = Double((rgbValue & 0x00FF00) >> 8) / 255.0
+        let b = Double(rgbValue & 0x0000FF) / 255.0
+        
+        self.init(red: r, green: g, blue: b)
+    }
+}
+
 

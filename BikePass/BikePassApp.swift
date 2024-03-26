@@ -6,16 +6,12 @@
 //
 
 import SwiftUI
+import TelemetryClient
 
 @main
 struct BikePassApp: App {
-    
     @StateObject var viewModel = QuizViewModel()
-    
-    
     var body: some Scene {
-        
-        
         WindowGroup {
             if viewModel.quizCompleted {
                 BikePassOwner()
@@ -23,12 +19,15 @@ struct BikePassApp: App {
                 ContentView()
             }
         }
-        
-//        WindowGroup {
-//           
-//                ContentView()
-//            
-//        }
     }
+    
+    init() {
+        let configuration = TelemetryManagerConfiguration(
+            appID: "04139749-2E64-43E8-869E-794EEB9F25F2")
+        TelemetryManager.initialize(with: configuration)
+        TelemetryManager.send("applicationDidFinishLaunching")
+    }
+    
+    
 }
 

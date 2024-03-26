@@ -8,16 +8,21 @@
 import SwiftUI
 
 
+
+
 struct QuizSheetView: View {
     @Environment(\.presentationMode) var presentationMode
     let quiz: Quiz
-    @State private var currentQuestionIndex = 7
+    @State private var currentQuestionIndex = 8
     // Define a state to manage explicit navigation link activation
     @State private var activeLink: Int? = nil
     @State private var showQuizCompleteView = false
     @Environment(\.colorScheme) var colorScheme
     var viewModel: QuizViewModel
     var dismissAction: () -> Void // Add this line
+    
+    
+    
 
     var body: some View {
         NavigationStack {
@@ -30,6 +35,7 @@ struct QuizSheetView: View {
                 ForEach(0..<(quiz.questions.count + 1), id: \.self) { index in
                     NavigationLink(destination: questionView(index: index), tag: index, selection: $activeLink) {
                         EmptyView()
+                        
                     }
                     .hidden()
                 }

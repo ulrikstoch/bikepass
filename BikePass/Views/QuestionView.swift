@@ -70,20 +70,29 @@ struct QuestionView: View {
         let correct = selectedAnswers == question.correctAnswers
         let remainingQuestions = totalQuestions - (questionIndex + 1)
         
+        let notificationGenerator = UINotificationFeedbackGenerator()
+        
         if correct {
-            // Set custom alert content for the correct answer
-            let notificationGenerator = UINotificationFeedbackGenerator()
             notificationGenerator.notificationOccurred(.success)
             alertIcon = "checkmark.circle.fill"
-            alertTitle = "Correct answer! 🙏"
-            alertDescription = "Only \(remainingQuestions) questions to go."
+            alertTitle = NSLocalizedString("correct_answer", comment: "")
+            
+            // Custom message based on the number of remaining questions
+            switch remainingQuestions {
+            case 1:
+                alertDescription = NSLocalizedString("one_question_left", comment: "")
+            case 0:
+                alertDescription = NSLocalizedString("youre_finished", comment: "")
+            default:
+                let formatString = NSLocalizedString("toast_description", comment: "")
+                alertDescription = String(format: formatString, remainingQuestions)
+            }
+            
         } else {
-            // Set custom alert content for the wrong answer
-            let notificationGenerator = UINotificationFeedbackGenerator()
             notificationGenerator.notificationOccurred(.error)
             alertIcon = "xmark.circle.fill"
-            alertTitle = "Not quite right 🤔"
-            alertDescription = "Watch the video and try again."
+            alertTitle = NSLocalizedString("wrong_answer_title", comment: "")
+            alertDescription = NSLocalizedString("wrong_answer_description", comment: "")
         }
         showCustomAlert = true
         withAnimation(.bouncy(duration: 0.4)) {
@@ -91,12 +100,11 @@ struct QuestionView: View {
             alertOpacity = 1
         }
         
-        
         // Dismiss the custom alert after a delay and navigate if correct
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // Adjust the delay as needed
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             withAnimation(.easeInOut(duration: 0.3)) {
-                alertOffset = -100
-                alertOpacity = 0// Slide up
+                alertOffset = -100 // Slide up
+                alertOpacity = 0
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 showCustomAlert = false
@@ -106,6 +114,7 @@ struct QuestionView: View {
             }
         }
     }
+
     
     
     

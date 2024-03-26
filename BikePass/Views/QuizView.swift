@@ -9,65 +9,99 @@ import SwiftUI
 
 let quiz = Quiz(questions: [
     Question(
-        question: "Where can you bike in Copenhagen?",
-        options: ["Everywhere", "On the bike lanes", "Right side of the road", "Left side of the road"],
-        correctAnswers: [1, 2],
-        selectionType: .multiple,
-        imageName: "img_q1",
-        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/5c34a4d6ff917aa2a99d037e5ba182cc/manifest/video.m3u8")!
-        
-    ),
+            question: NSLocalizedString("q1", comment: ""),
+            options: [
+                NSLocalizedString("q1_option1", comment: ""),
+                NSLocalizedString("q1_option2", comment: ""),
+                NSLocalizedString("q1_option3", comment: ""),
+                NSLocalizedString("q1_option4", comment: "")
+            ],
+            correctAnswers: [1, 2],
+            selectionType: .multiple,
+            imageName: "img_q1",
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/5c34a4d6ff917aa2a99d037e5ba182cc/manifest/video.m3u8")!
+        ),
+        Question(
+            question: NSLocalizedString("q2", comment: ""),
+            options: [
+                NSLocalizedString("q2_option1", comment: ""),
+                NSLocalizedString("q2_option2", comment: ""),
+                NSLocalizedString("q2_option3", comment: "")
+            ],
+            correctAnswers: [1],
+            selectionType: .single,
+            imageName: "img_q2",
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/9ac931bbb709a55bd2640776cb243973/manifest/video.m3u8")!
+        ),
+        Question(
+            question: NSLocalizedString("q3", comment: ""),
+            options: [
+                NSLocalizedString("q3_option1", comment: ""),
+                NSLocalizedString("q3_option2", comment: ""),
+                NSLocalizedString("q3_option3", comment: "")
+            ],
+            correctAnswers: [1],
+            selectionType: .single,
+            imageName: "img_q3",
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/89a9f12fc68925bec975c797af70ee57/manifest/video.m3u8")!
+        ),
+        Question(
+            question: NSLocalizedString("q4", comment: ""),
+            options: [
+                NSLocalizedString("q4_option1", comment: ""),
+                NSLocalizedString("q4_option2", comment: ""),
+                NSLocalizedString("q4_option3", comment: "")
+            ],
+            correctAnswers: [2],
+            selectionType: .single,
+            imageName: "img_q4",
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/30f949f07b84480e39f275479cd8a2d6/manifest/video.m3u8")!
+        ),
+        Question(
+            question: NSLocalizedString("q5", comment: ""),
+            options: [
+                NSLocalizedString("q5_option1", comment: ""),
+                NSLocalizedString("q5_option2", comment: ""),
+                NSLocalizedString("q5_option3", comment: ""),
+                NSLocalizedString("q5_option4", comment: "")
+            ],
+            correctAnswers: [0],
+            selectionType: .single,
+            imageName: "img_q5",
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/69d5027bc2d290566ffc52fb089cd25e/manifest/video.m3u8")!
+        ),
+        Question(
+            question: NSLocalizedString("q6", comment: ""),
+            options: [
+                NSLocalizedString("q6_option1", comment: ""),
+                NSLocalizedString("q6_option2", comment: ""),
+                NSLocalizedString("q6_option3", comment: ""),
+                NSLocalizedString("q6_option4", comment: "")
+            ],
+            correctAnswers: [2],
+            selectionType: .single,
+            imageName: "img_q6",
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/1537a589b73f68659c0036520a2a4226/manifest/video.m3u8")!
+        ),
+        Question(
+            question: NSLocalizedString("q7", comment: ""),
+            options: [
+                NSLocalizedString("q7_option1", comment: ""),
+                NSLocalizedString("q7_option2", comment: ""),
+                NSLocalizedString("q7_option3", comment: "")
+            ],
+            correctAnswers: [0],
+            selectionType: .single,
+            imageName: "img_q7",
+            videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/d6ef24e8df072060d89f3e2677f4a252/manifest/video.m3u8")!
+        ),
     Question(
-        question: "How do you ride if you’re more than one person?",
-        options: ["Side-by-side", "In a line behind each other", "Doesn’t matter"],
-        correctAnswers: [1],
-        selectionType: .single,
-        imageName: "img_q2",
-        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/9ac931bbb709a55bd2640776cb243973/manifest/video.m3u8")!
-    ),
-    Question(
-        question: "Which side do you overtake on?",
-        options: ["Right side", "Left side", "Both"],
-        correctAnswers: [1],
-        selectionType: .single,
-        imageName: "img_q3",
-        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/89a9f12fc68925bec975c797af70ee57/manifest/video.m3u8")!
-    ),
-    Question(
-        question: "What do you do before overtaking?",
-        options: ["Nothing", "Yell at the person in front to make sure they know you’re overtaking", "Look behind you to make sure there’s not other cyclists about to overtake you"],
-        correctAnswers: [2],
-        selectionType: .single,
-        imageName: "img_q4",
-        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/30f949f07b84480e39f275479cd8a2d6/manifest/video.m3u8")!
-    ),
-    Question(
-        question: "What do you do when you hear a bell behind you?",
-        options: ["Pull to the right and let the person overtake", "Slow down and wait for the person to overtake", "Ignore it", "Ring my bell"],
-        correctAnswers: [0],
-        selectionType: .single,
-        imageName: "img_q5",
-        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/69d5027bc2d290566ffc52fb089cd25e/manifest/video.m3u8")!
-    ),
-    Question(
-        question: "You want to stop in bike lane or road – what do you do?",
-        options: ["Just stop", "Raise one of your hands and stop", "Raise your left hand and pull to the right", "Raise your right hand and pull to the right"],
-        correctAnswers: [2],
-        selectionType: .single,
-        imageName: "img_q6",
-        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/1537a589b73f68659c0036520a2a4226/manifest/video.m3u8")!
-    ),
-    Question(
-        question: "How do you turn to the right?",
-        options: ["Indicate with your right arm and then turn right", "Just turn to the right", "Indicate with your left arm and then turn right"],
-        correctAnswers: [0],
-        selectionType: .single,
-        imageName: "img_q7",
-        videoURL: URL(string: "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/d6ef24e8df072060d89f3e2677f4a252/manifest/video.m3u8")!
-    ),
-    Question(
-        question: "How do you make a left turn?",
-        options: ["Make a direct left turn", "Cross the street, stop and wait for green again.", "Use the pedetrian crosswalk"],
+        question: NSLocalizedString("q8", comment: ""),
+        options: [
+            NSLocalizedString("q8_option1", comment: ""),
+            NSLocalizedString("q8_option2", comment: ""),
+            NSLocalizedString("q8_option3", comment: "")
+        ],
         correctAnswers: [1],
         selectionType: .single,
         imageName: "img_q8",
@@ -101,89 +135,87 @@ let quiz = Quiz(questions: [
 struct QuizView: View {
     let quiz: Quiz
     @ObservedObject var viewModel: QuizViewModel = QuizViewModel()
+    @State private var navigateToVideoView = false
     @State private var showingQuizSheet = false
     @State private var showBikePassView = false
     @State private var showVideoPlayer = false
     @State private var showButton = false
+//    @State private var contentOpacity: Double = 1.0
+    
+    
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
         VStack {
-                    if viewModel.quizCompleted && showBikePassView {
-                        BikePassOwner()
-                            .transition(.opacity) // Apply an opacity transition
-                            .animation(.easeIn, value: showBikePassView) // Animate the transition
-                            .ignoresSafeArea(.all)
-                            .navigationBarHidden(true)
+            if viewModel.quizCompleted && showBikePassView {
+                BikePassOwner()
+                    .transition(.opacity) // Apply an opacity transition
+                    .animation(.easeIn, value: showBikePassView) // Animate the transition
+                    .ignoresSafeArea(.all)
+                    .navigationBarHidden(true)
+                
+            } else {
+                VStack(alignment: .center) {
+                    
+                    VStack {
+                        Image("pass_front")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .shadow(color: .black.opacity(0.08), radius: 1.42548, x: 0, y: 2.30138)
+                            .shadow(color: .black.opacity(0.06), radius: 3.60515, x: 0, y: 5.82036)
+                            .shadow(color: .black.opacity(0.04), radius: 7.35416, x: 0, y: 11.87298)
+                            .shadow(color: .black.opacity(0.04), radius: 15.14818, x: 0, y: 24.4561)
+                            .shadow(color: .black.opacity(0.02), radius: 41.5, x: 0, y: 67)
+                    }
 
-                    } else {
-                        VStack(alignment: .center) {
-                            
-                            VStack {
-                                Image("package")
-//                                MiniBikePassView()
-                            }
-                            .frame(maxHeight: 400)
-//                            .padding(.horizontal)
-//                            .padding(.bottom)
-                            
 
+                    
+            
+                    NavigationLink(destination: VideoView(), isActive: $navigateToVideoView) {
+                        EmptyView()
+                    }
 
-                            VStack(alignment: .leading) {
-                                Text("Unlock your own Bike Pass today")
-                                    .font(.system(size: 32))
-                                    .fontWeight(.bold)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.bottom, 5.0)
-                                    .padding(.top, 16.0)
-                                
-                                
-                                Text("Complete the 8 question test and get your own BikePass today.")
-                                    .font(.system(size: 17))
-                                    .fontWeight(.regular)
-                                
-                                    .foregroundColor(colorScheme == .dark ? Color(UIColor.label) : Color(UIColor.secondaryLabel))
-                                    .multilineTextAlignment(.leading)
-                                    .lineSpacing(5)
-
-                            }
-
-                        Spacer()
-                            
-                            VStack {
-                                PrimaryButton(action: {
-                                            showingQuizSheet = true
-                                            let generator = UIImpactFeedbackGenerator(style: .soft)
-                                            generator.impactOccurred()
-                                }, label: "Start test")
-                            }
-                            
-                            
-                        }
-                        .toolbarRole(.editor)
-                        .padding([.top, .leading, .trailing], 24.0)
+                    VStack(alignment: .leading) {
+                        Text(NSLocalizedString("bikepass_intro_title", comment: ""))
+                            .font(.system(size: 37))
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.leading)
+                            .padding(.bottom, 5.0)
+                            .padding(.top, 20.0)
                         
-                        .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
-                        .sheet(isPresented: $showingQuizSheet) {
-                            NavigationView {
-                                QuizSheetView(quiz: quiz, viewModel: viewModel, dismissAction: {
-                                    showingQuizSheet = false
-                                })
-                            }
-                            .interactiveDismissDisabled(true)
-                        }
-                    }
-                }
-                .onChange(of: viewModel.quizCompleted) { completed in
-                    if completed {
-                        withAnimation {
-                            showBikePassView = true
-                        }
-                    }
-                }
+                        
 
+                        
+                        Text(NSLocalizedString("bikepass_intro_description", comment: ""))
+                            .fontWeight(.regular)
+                        
+                            .foregroundColor(colorScheme == .dark ? Color(UIColor.secondaryLabel) : Color(UIColor.secondaryLabel))
+                            .multilineTextAlignment(.leading)
+                            .lineSpacing(5)
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    VStack {
+                        PrimaryButton(action: {
+                            navigateToVideoView = true
+                            
+                            let generator = UIImpactFeedbackGenerator(style: .soft)
+                            generator.impactOccurred()
+                        }, label: NSLocalizedString("bikepass_intro_button", comment: ""))
+                    }
+                    
+                    
+                }
+                .padding([.leading, .bottom, .trailing], 24.0)
+                
+                .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
+            }
+        }
 
+        
     }
 }
 

@@ -10,11 +10,12 @@ import ConfettiSwiftUI
 
 struct BikePassOwner: View {
     @ObservedObject var viewModel: QuizViewModel = QuizViewModel()
-        @State private var scale: CGFloat = 0.25  // Initial scale
-        @State private var opacity: Double = 0    // Initial opacity
+    @State private var scale: CGFloat = 0.25  // Initial scale
+    @State private var opacity: Double = 0    // Initial opacity
     @State private var isFirstTime = !UserDefaults.standard.bool(forKey: "hasSeenConfetti")
     @State private var confettiCounter = 0
-
+    @State private var selectedTab: Int = 0
+    
     
     var body: some View {
         TabView {
@@ -26,47 +27,45 @@ struct BikePassOwner: View {
                                openingAngle: Angle(degrees: 60),
                                closingAngle: Angle(degrees: 120),
                                radius: 500
-                               )
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                )
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
             }
             .onAppear {
                 if isFirstTime {
-                    UserDefaults.standard.set(true, forKey: "hasSeenConfetti")
-
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        UserDefaults.standard.set(true, forKey: "hasSeenConfetti")
                         isFirstTime = false
                         confettiCounter += 1  // Trigger confetti
                         print("Confetti counter updated to: \(confettiCounter)")
+                    }
+                    
                     
                 }
-
-
             }
-
+            .tabItem {
+                
+                Label("BikePass", systemImage: "wallet.pass.fill")
+            }
             
-
-                        .tabItem {
-
-                            Label("BikePass", systemImage: "wallet.pass.fill")
-                        }
-            
-                    LearnView()
-                        .tabItem {
-
-                            Label("Safety Rules", systemImage: "book.pages.fill")
-                        }
-                    SettingsView()
-                        .tabItem {
-
-                            Label("Settings", systemImage: "gearshape")
-                        }
+            LearnView()
+                .tabItem {
+                    
+                    Label("Safety Rules", systemImage: "book.pages.fill")
                 }
-
-
+            SettingsView(viewModel: viewModel)
+                .tabItem {
+                    
+                    Label("Settings", systemImage: "gearshape")
+                }
+        }
+        
         .navigationBarHidden(true)
-
+        
     }
 }
 
 #Preview {
+    
     BikePassOwner()
 }

@@ -7,204 +7,154 @@
 
 import SwiftUI
 
+
+func createCompositeText() -> Text {
+    let partOne = Text("The ")
+        .foregroundColor(Color.white.opacity(0.7))
+    let partTwo: Text
+    if #available(iOS 17.0, *) {
+        partTwo = Text("unofficial").foregroundStyle(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.white.opacity(0.9), Color.white.opacity(0.7), Color.white.opacity(0.9)]),
+                startPoint: .leading,
+                endPoint: .trailing
+            )
+        )
+    } else {
+        partTwo = Text("unofficial").foregroundColor(.white)
+    }
+    let partThree = Text(" biking license for biking in Copenhagen.")
+        .foregroundColor(Color.white.opacity(0.7))
+    
+    return partOne + partTwo + partThree
+}
+
 struct InfoView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.openURL) var openURL
     @Environment(\.colorScheme) var colorScheme
     @State private var isShowingShareSheet = false
-//    @AppStorage("selectedIconName") var selectedIconName: String = "AppIcon" // Fetching the selected icon name
- 
-     var body: some View {
-             List {
-                 Section {
-                     ZStack {
-                         
-                         Image("app_icon_shadow")
-                             .padding(.top, 50.0)
-                         
-                         VStack{
-                             Text("BikePass")
-                                 .font(.title)
-                                 .fontWeight(.bold)
-                                 .multilineTextAlignment(.center)
-                                 .padding(.bottom, 1.0)
-                             
-                             
-                             Text("Built by Ulrik Stoch Jensen")
-                                 .font(.callout)
-                                 .multilineTextAlignment(.center)
-                                 .padding(.bottom, 10.0)
-
-                             
-                             Text("Illustrations and video \nby Copenhagen Bicycles")
-                                 .font(.system(size: 14))
-                                 .foregroundColor(Color.gray)
-                                 .multilineTextAlignment(.center)
-                                 .padding(.bottom, 10.0)
-                             
-                         }
-                         .offset(y: 100)
-                     }
-//                         .frame(width: .infinity, height: 400)
-                     .listRowInsets(EdgeInsets(top: -20, leading: -20, bottom: -20, trailing: -20))
-                 }
-                 .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
-
-                                    
-                 Section {
-//                     NavigationLink {
-//                         WidgetSettings(model: BadestedModel())
-//                     } label: {
-//                         HStack {
-//                             ZStack{
-//                                 Image("swim")
-//                             }
-//                             .frame(width: 28.0, height: 28.0)
-//                             .background(Color.blue)
-//                             .cornerRadius(7)
-//                             Text("Widget settings")
-//                         }
-//
-//                     }
-                     
-//                     NavigationLink {
-//                         Badevandskvalitet()
-//                     } label: {
-//                         HStack {
-//                             ZStack{
-//                                 Image("swim")
-//                             }
-//                             .frame(width: 28.0, height: 28.0)
-//                             .background(Color.blue)
-//                             .cornerRadius(7)
-//                             Text("Hvad er badevandskvalitet?")
-//                         }
-//
-//                     }
-
-                     NavigationLink {
-                         Text("Credits")
-                         
-                     } label: {
-                         HStack {
-                             ZStack{
-                                 Image("heart")
-                             }
-                             .frame(width: 28.0, height: 28.0)
-                             .background(Color.red)
-                             .clipShape(RoundedRectangle(cornerRadius: 7, style: .continuous))
-                             Text("Tak til")
-                         }
-
-                     }
-                     
-//                     NavigationLink {
-//                         IconPickerView()
-//                     } label: {
-//                         HStack {
-//                             ZStack{
-//                                 Image("customicon")
-//                             }
-//                             .frame(width: 28.0, height: 28.0)
-//                             .background(Color.blue)
-//                             .cornerRadius(7)
-//                             Text("Vælg app ikon")
-//                         }
-//                     }
-                     
-//                     NavigationLink {
-//                         TipJarView()
-//                     } label: {
-//                         HStack {
-//                             ZStack{
-//                                 Image("donate")
-//                             }
-//                             .frame(width: 28.0, height: 28.0)
-//                             .background(Color.indigo)
-//                             .cornerRadius(7)
-//                             Text("Støt udviklingen")
-//                         }
-//
-//                     }
-                     
-                     HStack {
-                         ZStack{
-                             Image("star")
-                         }
-                         .frame(width: 28.0, height: 28.0)
-                         .background(Color.orange)
-                         .clipShape(RoundedRectangle(cornerRadius: 7, style: .continuous))
-                          Button(action: {
-                                      ReviewHandler.requestReviewManually()
-                                  }) {
-                                      Text("Bedøm app")
-                                          .foregroundColor(Color(.label))
-                                  }
-                         Spacer()
-
-                     }
-                     
-
-
-                 }
-                 
-                 
-                 
-                 Section {
-                     HStack {
-                         Spacer()
-                         VStack(alignment: .center, spacing: 5.0) {
-                                  Text("Designet og bygget i København")
-                                       .font(.caption)
-                                       .foregroundColor(Color.gray)
-                                       .padding(.bottom, 2.0)
-                                  Text("Version 2.0")
-                                       .font(.caption)
-                                       .foregroundColor(Color.gray)
-                              }
-                         
-                         Spacer()
-                     }
-                     
-                          .padding(.bottom, 15.0)
-                          .padding(.top, 20)
-                          .listRowInsets(EdgeInsets(top: -40, leading: -20, bottom: -20, trailing: -20))
-                 }
-                 
-                 .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
-                 
-                 
-
-             }
-             .listStyle(InsetGroupedListStyle())
-//             .toolbar {
-//             ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarLeading) {
-//                 Button {
-//                     presentationMode.wrappedValue.dismiss()
-//                 } label: {
-//                     Image(systemName: "xmark")
-//                          .resizable()
-//    //                          .frame(width: 25, height: 25)
-//                     .foregroundColor(.gray)
-//                 }
-//             }
-//         }
-
-                
-   }
+    //    @AppStorage("selectedIconName") var selectedIconName: String = "AppIcon" // Fetching the selected icon name
     
-//    var imageForSelectedIcon: Image {
-//            switch selectedIconName {
-//            case "Icon-Winter":
-//                return Image("app_image_winter")
-//            case "Icon-Special":
-//                return Image("app_image_special")
-//            default:
-//                return Image("app_image")
-//            }
-//        }
+    var body: some View {
+        
+        
+        ZStack {
+            colorScheme == .dark ? Color(UIColor.systemBackground)
+                .ignoresSafeArea(): Color(UIColor.secondarySystemBackground).ignoresSafeArea()
+            
+            ScrollView {
+                VStack(alignment: .center, spacing: 24) {
+                    
+                    VStack(alignment: .leading) {
+                        Spacer()
+                        Text("BikePass")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .multilineTextAlignment(.leading)
+                            .padding(.bottom, 8.0)
+                        //                                .padding(.top, 8.0)
+                        
+                        VStack(alignment: .leading, spacing: 10) {
+                            // Split the text into two parts: "The" + "unofficial" + "biking license for biking in Copenhagen."
+                            // Apply the gradient only to the "unofficial" part.
+                            Text("The ")
+                                .foregroundColor(Color.white.opacity(0.7)) +
+                            Text("unofficial").foregroundStyle(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color.white.opacity(0.9), Color.white.opacity(0.7), Color.white.opacity(0.9)]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                            ) +
+                            Text(" biking license for biking in Copenhagen.")
+                                .foregroundColor(Color.white.opacity(0.7))
+                            
+                            Text("Built to promote safety and ensure all cyclists have a good time exploring the city on two wheels.")
+                                .foregroundColor(Color.white.opacity(0.7))
+                            
+                        }
+                        .padding(.bottom, 8.0)
+                    }
+                    .padding(24)
+                    .background(
+                        LinearGradient(
+                            stops: [
+                                Gradient.Stop(color: Color(red: 0.26, green: 0.42, blue: 0.96), location: 0.00),
+                                Gradient.Stop(color: Color(red: 0.17, green: 0.34, blue: 0.97), location: 1.00),
+                            ],
+                            startPoint: UnitPoint(x: 0.5, y: 0),
+                            endPoint: UnitPoint(x: 0.5, y: 1)
+                        )
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                    
+                    
+                    
+                    VStack(spacing:0) {
+                        Image("about_CB")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        //                                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        
+                            .padding(.bottom, 24.0)
+                        
+                        VStack(alignment: .leading, spacing: 20) {
+                            Image("copenhagen_bicycles")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 140)
+                            Text("All videos and illustrations in BikePass are property of Copenhagen Bicycles and used with their permission")
+                                .foregroundColor(Color.gray)
+                        }
+                        .padding(.horizontal, 23)
+                        .padding(.bottom, 24)
+                    }
+                    .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                    
+                    
+                    VStack {
+                        Image("builtby")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.bottom, 10.0)
+                        
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Made in Copenhagen")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.leading)
+                            Text("BikePass is a public service project built and designed by Ulrik Stoch Jensen. ")
+                                .foregroundColor(Color.gray)
+                                .multilineTextAlignment(.leading)
+                        }
+                        .padding(.horizontal, 24)
+                        .padding(.bottom, 24)
+                    }
+                    .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                    
+                    
+                    Text("BikePass © 2024, version 1.0.0")
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.top)
+                    
+                    
+                    
+                    
+                }
+                .padding([.leading, .bottom, .trailing])
+            }
+        }
+    }
 }
 
 #Preview {
     InfoView()
 }
+
+
