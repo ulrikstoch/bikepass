@@ -108,11 +108,11 @@ struct VideoView: View {
                                         )
                                     
                                 }
-                                .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
+                                .clipShape(RoundedRectangle(cornerRadius: 48, style: .continuous))
                                 
                             })
                             .sheet(isPresented: $showVideoPlayer) {
-                                VideoPlayerView(showButton: $showButton)
+                                VideoPlayerView(showButton: $showButton, isPresented: $showVideoPlayer)
                             }
                             Spacer()
                             Text(NSLocalizedString("bikepass_video_title", comment: ""))
@@ -151,6 +151,7 @@ struct VideoView: View {
                                 .id("bottomButton")
                             }
                         }
+                        .toolbarBackground(.hidden, for: .navigationBar)
                         .padding(.horizontal, 24.0)
                         .onChange(of: showButton) {
                             // Directly check the showButton state
@@ -206,12 +207,43 @@ struct VideoView: View {
 
 struct VideoPlayerView: View {
     @Binding var showButton: Bool
-    let player = AVPlayer(url: Bundle.main.url(forResource: "full_video", withExtension: "mp4")!)
-    
+    var player: AVPlayer
+
+    @Binding var isPresented: Bool
+
+    init(showButton: Binding<Bool>, isPresented: Binding<Bool>) {
+        self._showButton = showButton
+        self._isPresented = isPresented
+
+        // Define your video URLs here
+        let videoURLs = [
+            "en": "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/fc9d1fe9a56600dc53aaf51c7b1e7493/manifest/video.m3u8",
+            "fr": "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/fafe209ddda407f17f523d9adaeabc1f/manifest/video.m3u8",
+            "de": "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/261e78cf0bc00b045684d5833e57326d/manifest/video.m3u8",
+            "zh": "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/6443e3ad98f857437830a71fa6ac3fcb/manifest/video.m3u8",
+            "jp": "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/6bc935c8826eac49fc88e28f59a7b012/manifest/video.m3u8",
+            "es": "https://customer-9pt4qx20ydn5u5h2.cloudflarestream.com/01c971a88fe118f39caf5e45ce000dfe/manifest/video.m3u8"
+        ]
+
+        // Get the user's current language code
+        let locale = Locale.current
+        let languageCode = locale.languageCode ?? "en"  // Default to English
+
+        // Select the appropriate URL
+        let urlString = videoURLs[languageCode] ?? videoURLs["en"]!
+        let url = URL(string: urlString)!
+
+        // Initialize the player
+        self.player = AVPlayer(url: url)
+    }
+
     var body: some View {
         VideoPlayer(player: player)
             .onAppear {
                 player.play()
+                NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { _ in
+                    self.isPresented = false // Dismiss the view when the video ends
+                }
             }
             .onDisappear {
                 player.pause()
@@ -222,8 +254,34 @@ struct VideoPlayerView: View {
     }
 }
 
+
+//struct VideoPlayerView: View {
+//    @Binding var showButton: Bool
+//    let player = AVPlayer(url: Bundle.main.url(forResource: "full_video", withExtension: "mp4")!)
+//    
+//    @Binding var isPresented: Bool
+//    
+//    var body: some View {
+//        VideoPlayer(player: player)
+//            .onAppear {
+//                player.play()
+//                NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { _ in
+//                                    self.isPresented = false // Dismiss the view when video ends
+//                                }
+//            }
+//            .onDisappear {
+//                player.pause()
+//                NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+//                NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+//                showButton = true
+//            }
+//            .edgesIgnoringSafeArea(.all)
+//    }
+//}
+
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
         VideoView()
+            .environment(\.locale, Locale(identifier: "EN"))
     }
 }

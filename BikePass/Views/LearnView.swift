@@ -27,6 +27,11 @@ struct LearnView: View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
                 
+//                Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
+//                    .resizable()
+//                    .edgesIgnoringSafeArea(.all)
+//                    .opacity(colorScheme == .dark ? 0.1 : 0.4)
+                
                 VTabView(selection: $selectedTabIndex, indexPosition: .trailing) {
                     
                     GeometryReader { geometry in
@@ -87,7 +92,7 @@ struct LearnView: View {
                             .padding(.top, 16)
                             .padding(.bottom, 40)
                             .sheet(isPresented: $showVideoPlayer) {
-                                VideoPlayerView(showButton: $showButton)
+                                VideoPlayerView(showButton: $showButton, isPresented: $showVideoPlayer)
                             }
                             
                             Text("Safety rules")
@@ -144,7 +149,7 @@ struct LearnView: View {
                     }
                     
                 }
-                //                .tabViewStyle(PageTabViewStyle())
+
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .indexViewStyle(.page(backgroundDisplayMode: .never))
                 
@@ -154,18 +159,23 @@ struct LearnView: View {
                     .offset(x: -28, y: -90)
                 
             }
+
+            
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            
             
             
             
         }
         .navigationTitle("Safety rules")
+
         
     }
 }
 
 #Preview {
     LearnView()
+        .environment(\.locale, Locale(identifier: "de"))
 }
 
 struct CustomPageControl: UIViewRepresentable {

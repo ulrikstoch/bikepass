@@ -13,7 +13,7 @@ import SwiftUI
 struct QuizSheetView: View {
     @Environment(\.presentationMode) var presentationMode
     let quiz: Quiz
-    @State private var currentQuestionIndex = 8
+    @State private var currentQuestionIndex = 0
     // Define a state to manage explicit navigation link activation
     @State private var activeLink: Int? = nil
     @State private var showQuizCompleteView = false

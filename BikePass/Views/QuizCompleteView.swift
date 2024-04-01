@@ -96,7 +96,8 @@ struct QuizCompleteView: View {
         VStack {
             Spacer()
             VStack {
-                Image(colorScheme == .dark ? "complete_dark" : "complete_light")
+//                Image(colorScheme == .dark ? "complete_dark" : "complete_light")
+                Image("complete")
                     .scaleEffect(imageScale)
                     .onAppear {
                         withAnimation(.bouncy(duration: 0.4)) {
@@ -274,6 +275,7 @@ struct QuizCompleteView_Previews: PreviewProvider {
         QuizCompleteView(viewModel: viewModel, dismissAction: {
             print("Dismiss action triggered")
         })
+        .environment(\.locale, Locale(identifier: "DA"))
     }
 }
 

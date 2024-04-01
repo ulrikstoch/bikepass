@@ -68,4 +68,6 @@ struct BikePassOwner: View {
 #Preview {
     
     BikePassOwner()
+    
+        .environment(\.locale, Locale(identifier: "DE"))
 }

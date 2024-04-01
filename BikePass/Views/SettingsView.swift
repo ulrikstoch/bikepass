@@ -52,6 +52,11 @@ struct SettingsView: View {
                 colorScheme == .dark ? Color(UIColor.systemBackground)
                     .ignoresSafeArea(): Color(UIColor.secondarySystemBackground).ignoresSafeArea()
                 
+//                Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
+//                    .resizable()
+//                    .edgesIgnoringSafeArea(.all)
+//                    .opacity(colorScheme == .dark ? 0.1 : 0.4)
+                
                 
                 ScrollView {
                     VStack(spacing: 32) {
@@ -134,8 +139,34 @@ struct SettingsView: View {
                                 Divider()
                                 
                                 VStack(alignment: .leading) {
-                                    NavigationLink {
-                                        InfoView()
+                                    Button {
+                                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                                                UIApplication.shared.open(url)
+                                            }
+                                        
+                                    } label: {
+                                        HStack(spacing: 14) {
+                                            ZStack{
+                                                Image("globe")
+                                            }
+                                            .frame(width: 28.0, height: 28.0)
+                                            .background(Color.green)
+                                            .clipShape(RoundedRectangle(cornerRadius: 7, style: .continuous))
+                                            Text("Language")
+                                                .foregroundStyle(Color(UIColor.label))
+                                            Spacer()
+                                            Image(systemName: "chevron.right")
+                                        }
+                                        .padding(.trailing, 8)
+                                    }
+                                }
+                                .padding([.top, .bottom, .trailing], 20.0)
+                                
+                                Divider()
+                                
+                                VStack(alignment: .leading) {
+                                    Button {
+                                        ReviewHandler.requestReviewManually()
                                         
                                     } label: {
                                         HStack(spacing: 14) {
@@ -160,13 +191,13 @@ struct SettingsView: View {
                                 VStack(alignment: .leading) {
                                     
                                     HStack(spacing: 14) {
-                                        ShareLink(item: URL(string: "https://developer.apple.com/xcode/swiftui/")!) {
+                                        ShareLink(item: URL(string: "https://apps.apple.com/app/id6480235107")!) {
                                             HStack(spacing: 14) {
                                                 Image("share")
                                                     .resizable() // Ensure your image can resize
                                                     .aspectRatio(contentMode: .fit)
                                                     .frame(width: 28.0, height: 28.0)
-                                                    .background(Color.green)
+                                                    .background(Color.purple)
                                                     .clipShape(RoundedRectangle(cornerRadius: 7, style: .continuous))
                                                 Text("Share with friends")
                                                     .foregroundStyle(Color(UIColor.label))

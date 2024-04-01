@@ -10,7 +10,6 @@
 		5C4680C92B7BCF180074F40E /* BikePassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4680C82B7BCF180074F40E /* BikePassView.swift */; };
 		5C47D5E42BAF9D94006B08F4 /* CountrySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C47D5E32BAF9D94006B08F4 /* CountrySelector.swift */; };
 		5C4938812B7D78280013EF32 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4938802B7D78280013EF32 /* VideoView.swift */; };
-		5C4938832B7D7BC70013EF32 /* full_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C4938822B7D7BC70013EF32 /* full_video.mp4 */; };
 		5C4938852B7D85240013EF32 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4938842B7D85240013EF32 /* PrimaryButton.swift */; };
 		5C4938872B7D89110013EF32 /* MiniBikePassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4938862B7D89110013EF32 /* MiniBikePassView.swift */; };
 		5C4938892B7E66700013EF32 /* video_thumb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C4938882B7E66700013EF32 /* video_thumb.mp4 */; };
@@ -40,7 +39,6 @@
 		5CEF7CFE2B9E3334002A1BC6 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF7CFD2B9E3334002A1BC6 /* QuizViewModel.swift */; };
 		5CEF7D002B9E39BC002A1BC6 /* BikePassOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF7CFF2B9E39BC002A1BC6 /* BikePassOwner.swift */; };
 		5CEF7D052B9E4630002A1BC6 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEF7D042B9E4630002A1BC6 /* ConfettiSwiftUI */; };
-		5CEF7D072B9E49F6002A1BC6 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF7D062B9E49F6002A1BC6 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +62,6 @@
 		5C4680C82B7BCF180074F40E /* BikePassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassView.swift; sourceTree = "<group>"; };
 		5C47D5E32BAF9D94006B08F4 /* CountrySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelector.swift; sourceTree = "<group>"; };
 		5C4938802B7D78280013EF32 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		5C4938822B7D7BC70013EF32 /* full_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = full_video.mp4; sourceTree = "<group>"; };
 		5C4938842B7D85240013EF32 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		5C4938862B7D89110013EF32 /* MiniBikePassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBikePassView.swift; sourceTree = "<group>"; };
 		5C4938882B7E66700013EF32 /* video_thumb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video_thumb.mp4; path = BikePass/Videos/video_thumb.mp4; sourceTree = SOURCE_ROOT; };
@@ -72,6 +69,7 @@
 		5C73B08E2B72CC1C0058ECDE /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		5C7F18032B718D9A00E60D3A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		5CAC15692BA8F8070099F079 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5CAE06472BB7194E0044005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5CB85CAF2B9F571500658845 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		5CB85CB12B9F5B5700658845 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		5CB85CB32B9F5D7400658845 /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 		5CDF61602A59979B00BF7138 /* QuizSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSheetView.swift; sourceTree = "<group>"; };
 		5CEF7CFD2B9E3334002A1BC6 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		5CEF7CFF2B9E39BC002A1BC6 /* BikePassOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePassOwner.swift; sourceTree = "<group>"; };
-		5CEF7D062B9E49F6002A1BC6 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +137,6 @@
 			children = (
 				5CB87ABC2BA9AFA80071F6E6 /* video1.mp4 */,
 				5C4938882B7E66700013EF32 /* video_thumb.mp4 */,
-				5C4938822B7D7BC70013EF32 /* full_video.mp4 */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -179,7 +175,6 @@
 		5CDF61202A5990C700BF7138 = {
 			isa = PBXGroup;
 			children = (
-				5CEF7D062B9E49F6002A1BC6 /* Test.swift */,
 				5CDF612B2A5990C700BF7138 /* BikePass */,
 				5CDF613C2A5990C800BF7138 /* BikePassTests */,
 				5CDF61462A5990C800BF7138 /* BikePassUITests */,
@@ -200,6 +195,7 @@
 		5CDF612B2A5990C700BF7138 /* BikePass */ = {
 			isa = PBXGroup;
 			children = (
+				5CAE06472BB7194E0044005D /* Info.plist */,
 				5CDF612C2A5990C700BF7138 /* BikePassApp.swift */,
 				5C69F91C2B7F5F5B00B869AE /* Views */,
 				5C69F91A2B7F5F0600B869AE /* Models */,
@@ -329,6 +325,11 @@
 				en,
 				Base,
 				da,
+				fr,
+				"zh-Hans",
+				de,
+				es,
+				ja,
 			);
 			mainGroup = 5CDF61202A5990C700BF7138;
 			packageReferences = (
@@ -353,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C4938892B7E66700013EF32 /* video_thumb.mp4 in Resources */,
-				5C4938832B7D7BC70013EF32 /* full_video.mp4 in Resources */,
 				5CAC156A2BA8F8070099F079 /* Localizable.xcstrings in Resources */,
 				5CDF61342A5990C800BF7138 /* Preview Assets.xcassets in Resources */,
 				5CB87ABB2BA9AFA80071F6E6 /* video1.mp4 in Resources */,
@@ -388,7 +388,6 @@
 				5C73B08F2B72CC1C0058ECDE /* CustomAlertView.swift in Sources */,
 				5CEF7CFE2B9E3334002A1BC6 /* QuizViewModel.swift in Sources */,
 				5CB85CB02B9F571500658845 /* LearnView.swift in Sources */,
-				5CEF7D072B9E49F6002A1BC6 /* Test.swift in Sources */,
 				5CDF615B2A59919100BF7138 /* Quiz.swift in Sources */,
 				5C4938852B7D85240013EF32 /* PrimaryButton.swift in Sources */,
 				5CB85CB22B9F5B5700658845 /* InfoView.swift in Sources */,
@@ -492,6 +491,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -547,6 +547,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -567,10 +568,14 @@
 				DEVELOPMENT_TEAM = 5WL7MTZTYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BikePass/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BikePass;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,9 +583,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -595,10 +604,14 @@
 				DEVELOPMENT_TEAM = 5WL7MTZTYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BikePass/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BikePass;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,9 +619,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ulrikstoch.BikePass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

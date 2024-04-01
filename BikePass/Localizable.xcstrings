@@ -2,14 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "‎‎" : {
-      "localizations" : {
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        }
-      }
+
     },
     " biking license for biking in Copenhagen." : {
       "localizations" : {
@@ -19,10 +12,40 @@
             "value" : "cykelkørekort til at cykle i København"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Fahrradlizenz zum Radfahren in Kopenhagen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : " biking license for biking in Copenhagen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " licencia de ciclismo para andar en bicicleta en Copenhague."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " pour circuler à vélo à Copenhague."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コペンハーゲンで自転車に乗るための自転車ライセンス。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " 在哥本哈根骑自行车的执照。"
           }
         }
       }
@@ -35,10 +58,40 @@
             "value" : "Om BikePass"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über BikePass"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "About BikePass"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de BikePass"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sur BikePass"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePassについて"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于BikePass"
           }
         }
       }
@@ -49,6 +102,42 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alle lande"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Länder"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Countries"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todos los países"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tous les pays"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべての国"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有国家"
           }
         }
       }
@@ -61,10 +150,40 @@
             "value" : "Alle videoer og illustrationer i BikePass er ejet af Copenhagen Bicycle og benyttet med deres tilladelse"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Videos und Illustrationen in BikePass sind Eigentum von Copenhagen Bicycles und werden mit deren Genehmigung verwendet"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "All videos and illustrations in BikePass are property of Copenhagen Bicycles and used with their permission"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todos los videos e ilustraciones en BikePass son propiedad de Copenhagen Bicycles y se utilizan con su permiso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toutes les vidéos et illustrations dans BikePass sont la propriété de Copenhagen Bicycles et utilisées avec leur autorisation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePassのすべての動画とイラストはCopenhagen Bicyclesの所有物であり、許可を得て使用されています"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass中的所有视频和插图均为哥本哈根自行车的财产，并获得他们的许可使用"
           }
         }
       }
@@ -77,7 +196,37 @@
             "value" : "BikePass"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BikePass"
@@ -90,13 +239,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "BikePas © 2024, version 1.0.0"
+            "value" : "BikePass © 2024, version 1.0.0"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass © 2024, Version 1.0.0"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BikePass © 2024, version 1.0.0"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass © 2024, versión 1.0.0"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass © 2024, version 1.0.0"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass © 2024、バージョン1.0.0"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass © 2024，版本 1.0.0"
           }
         }
       }
@@ -109,10 +288,40 @@
             "value" : "BikePass er et public service projekt bygget og designet af Ulrik Stoch Jensen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass ist ein öffentliches Dienstleistungsprojekt, das von Ulrik Stoch Jensen gebaut und entworfen wurde."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BikePass is a public service project built and designed by Ulrik Stoch Jensen. "
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass es un proyecto de servicio público construido y diseñado por Ulrik Stoch Jensen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass est un projet de service public construit et conçu par Ulrik Stoch Jensen."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePassはUlrik Stoch Jensenによって構築および設計された公共サービスプロジェクトです。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass是由Ulrik Stoch Jensen构建和设计的公共服务项目。"
           }
         }
       }
@@ -126,10 +335,40 @@
             "value" : "Fortsæt"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortfahren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Continue"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続ける"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续"
           }
         }
       }
@@ -140,13 +379,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "BikePass er som et uofficielt kørekort til cykling – et bevis på, at du kender teorien og reglerne for cykling i København."
+            "value" : "BikePass er som et uofficielt kørekort til at cykle – et bevis på, at du kender teorien og reglerne for cyklister i København."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass ist wie ein inoffizieller Führerschein zum Radfahren – ein Nachweis dafür, dass Sie die Theorie und die Regeln des Radfahrens in Kopenhagen kennen."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BikePass is like an unofficial drivers license for biking – a proof that you know the theory and rules of biking in Copenhagen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass es como una licencia de conducir no oficial para andar en bicicleta, una prueba de que conoces la teoría y las reglas del ciclismo en Copenhague."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass est comme un permis de conduire non officiel pour le vélo – une preuve que tu connais la théorie et les règles du vélo à Copenhague."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePassは、コペンハーゲンの自転車の理論と規則を知っていることを証明する、非公式の運転免許のようなものです。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass就像是骑自行车的非官方驾照 - 证明你了解哥本哈根骑行的理论和规则。"
           }
         }
       }
@@ -157,13 +426,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Få dit helt eget BikePass"
+            "value" : "Få dit personlige BikePass i dag"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Holen Sie Ihren BikePass heute."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Unlock your own BikePass"
+            "value" : "Get your personal BikePass today"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtén tu BikePass personal hoy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtiens ton BikePass personnel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日あなたの個人的なBikePassを取得してください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天获取您的个人BikePass"
           }
         }
       }
@@ -177,10 +476,40 @@
             "value" : "Start quizzen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz starten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start quiz"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar quiz"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démarre le quiz "
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クイズを開始"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始测验"
           }
         }
       }
@@ -191,13 +520,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lær reglerne ved at se denne video, før du fortsætter til BikePass Quizzen."
+            "value" : "Se videoen og lær reglerne, inden du fortsætter til BikePass Quizzen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sehen Sie sich das Video an und lernen Sie die Fahrradregeln, bevor Sie mit dem BikePass-Quiz fortfahren."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Learn the rules by watching this video, before you continue to the BikePass Quiz."
+            "value" : "Watch the video and learn the bike rules, before you continue to the BikePass Quiz."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mira el video y aprende las reglas de la bicicleta antes de continuar con el Quiz de BikePass."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regarde la vidéo et apprends les règles du vélo, avant de continuer vers le quiz BikePass."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビデオを見て自転車の規則を学んだ後、BikePassクイズに進みます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "观看视频并学习骑行规则，然后继续进行BikePass测验。"
           }
         }
       }
@@ -211,10 +570,40 @@
             "value" : "Gør dig klar til BikePass Quizzen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bereiten Sie sich auf das BikePass-Quiz vor"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prepare for the BikePass Quiz"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepárate para el Quiz de BikePass"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prépare-toi au quiz"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePassクイズの準備"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为BikePass测验做准备"
           }
         }
       }
@@ -227,10 +616,40 @@
             "value" : "Skabt for at fremme sikkerhed og sikre alle cyklister får en god oplevelse når de udforsker byen."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entwickelt, um Sicherheit zu fördern und sicherzustellen, dass alle Radfahrer eine gute Zeit beim Erkunden der Stadt auf zwei Rädern haben."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Built to promote safety and ensure all cyclists have a good time exploring the city on two wheels."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Construido para promover la seguridad y asegurar que todos los ciclistas disfruten explorando la ciudad en dos ruedas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Construit pour promouvoir la sécurité et garantir que tous les cyclistes passent un bon moment à explorer la ville sur deux roues."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安全を促進し、すべてのサイクリストが二輪で街を探索する楽しい時間を過ごせるように構築されました。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旨在提升安全性，确保所有骑自行车者在两轮上探索城市时拥有美好时光。"
           }
         }
       }
@@ -243,10 +662,40 @@
             "value" : "Annuller"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annule"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
           }
         }
       }
@@ -259,7 +708,37 @@
             "value" : "Clear UserDefaults"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear UserDefaults"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear UserDefaults"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear UserDefaults"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear UserDefaults"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear UserDefaults"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clear UserDefaults"
@@ -276,10 +755,40 @@
             "value" : "Korrekt svar! 🙏"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richtige Antwort! 🙏"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Correct answer! 🙏"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Respuesta correcta! 🙏"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réponse correcte! 🙏"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正解です！🙏"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正确答案！🙏"
           }
         }
       }
@@ -292,10 +801,120 @@
             "value" : "KBH BikePass"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CPH BikePass"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "CPH BikePass"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CPH BikePass"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CPH BikePass"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CPH BikePass"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CPH BikePass"
+          }
+        }
+      }
+    },
+    "DK" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DK"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DK"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DK"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DK"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DK"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DK"
+          }
+        }
+      }
+    },
+    "Language" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprog"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprache"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "语言"
           }
         }
       }
@@ -308,10 +927,40 @@
             "value" : "Skabt i København"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hergestellt in Kopenhagen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Made in Copenhagen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hecho en Copenhague"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conçu à Copenhague"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コペンハーゲン製"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哥本哈根制造"
           }
         }
       }
@@ -324,10 +973,40 @@
             "value" : "Navn på BikePass"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name auf BikePass"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Name on BikePass"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre en BikePass"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom du BikePass"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePassの名前"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BikePass上的名字"
           }
         }
       }
@@ -340,10 +1019,40 @@
             "value" : "Næste"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Next"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siguiente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次へ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个"
           }
         }
       }
@@ -357,10 +1066,40 @@
             "value" : "Kun 1 spørgsmål tilbage!"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur noch eine Frage übrig!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Only 1 questions left!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Solo queda una pregunta!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dernière question!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "残り1つの質問！"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只剩1个问题！"
           }
         }
       }
@@ -373,10 +1112,40 @@
             "value" : "Andet"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Andere"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Other"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otro"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autre chose"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他"
           }
         }
       }
@@ -389,7 +1158,37 @@
             "value" : "Placeholder til næste spørgsmål"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeholder for next question"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeholder for next question"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeholder for next question"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeholder for next question"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeholder for next question"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Placeholder for next question"
@@ -405,10 +1204,40 @@
             "value" : "Venligst indtast dit fulde navn"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte geben Sie Ihren vollständigen Namen ein"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Please enter your full name"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce tu nombre completo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écris ton nom complet svp."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フルネームを入力してください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入您的全名"
           }
         }
       }
@@ -421,10 +1250,40 @@
             "value" : "Hvor kan du cykle i København?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wo können Sie in Kopenhagen Fahrrad fahren?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Where can you bike in Copenhagen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Dónde puedes andar en bicicleta en Copenhague?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Où peux-tu circuler à vélo á Copenhague?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コペンハーゲンでどこで自転車に乗れますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你可以在哥本哈根的哪里骑自行车？"
           }
         }
       }
@@ -437,10 +1296,40 @@
             "value" : "Overalt"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Überall"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Everywhere"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En todas partes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partout"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どこでも"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到处"
           }
         }
       }
@@ -453,10 +1342,40 @@
             "value" : "På cykelstierne"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf den Fahrradwegen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "On the bike lanes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En los carriles bici"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sur les pistes cyclables"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自転車専用レーン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在自行车道上"
           }
         }
       }
@@ -469,10 +1388,40 @@
             "value" : "Højre side af vejen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechte Seite der Straße"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Right side of the road"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lado derecho de la carretera"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Côté droit de la route"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道路の右側"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路的右侧"
           }
         }
       }
@@ -485,10 +1434,40 @@
             "value" : "Venstre side af vejen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linke Seite der Straße"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Left side of the road"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lado izquierdo de la carretera"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Côté gauche de la route"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道路の左側"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路的左侧"
           }
         }
       }
@@ -501,10 +1480,40 @@
             "value" : "Hvordan kører du, hvis I er mere end én person?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wie fahren Sie, wenn Sie mehr als eine Person sind?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "How do you ride if you’re more than one person?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cómo conduces si sois más de una persona?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comment roulez-vous si vous êtes plus d'une personne?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "複数人で自転車に乗る場合、どうやって乗りますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你不是一个人骑车，你怎么骑？"
           }
         }
       }
@@ -517,10 +1526,40 @@
             "value" : "Side om side"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nebeneinander"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Side-by-side"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lado a lado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Côte à côte"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "並んで"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "并排"
           }
         }
       }
@@ -533,10 +1572,40 @@
             "value" : "I en række bag hinanden"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In einer Reihe hintereinander"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "In a line behind each other"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En una fila uno detrás del otro"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En file indienne"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一列に並んで"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一个接一个地排队"
           }
         }
       }
@@ -549,10 +1618,40 @@
             "value" : "Det betyder ikke noget"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spielt keine Rolle"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doesn’t matter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No importa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peu importe"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どちらでもない"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无所谓"
           }
         }
       }
@@ -565,10 +1664,40 @@
             "value" : "Hvilken side overhaler du på?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf welcher Seite überholen Sie?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Which side do you overtake on?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Por qué lado adelantas?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De quel côté dépasses-tu?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どちら側で追い越しますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你从哪一边超车？"
           }
         }
       }
@@ -581,10 +1710,40 @@
             "value" : "Højre side"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechte Seite"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Right side"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lado derecho"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Côté droit"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右側"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右侧"
           }
         }
       }
@@ -597,10 +1756,40 @@
             "value" : "Venstre side"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linke Seite"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Left side"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lado izquierdo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Côté gauche"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左側"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左侧"
           }
         }
       }
@@ -613,10 +1802,40 @@
             "value" : "Begge"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beide"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Both"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ambos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les deux"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どちらでも"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "两边都可以"
           }
         }
       }
@@ -629,10 +1848,40 @@
             "value" : "Hvad gør du før du overhaler?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was tun Sie, bevor Sie überholen?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "What do you do before overtaking?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Qué haces antes de adelantar?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Que fais-tu avant de dépasser?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追い越す前に何をしますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "超车前你做什么？"
           }
         }
       }
@@ -645,10 +1894,40 @@
             "value" : "Intet"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nichts"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nothing"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rien"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "何もしない"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "什么也不做"
           }
         }
       }
@@ -661,10 +1940,40 @@
             "value" : "Råber af personen foran for at sikre, at de ved, du overhaler"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schreien Sie die Person vor Ihnen an, um sicherzustellen, dass sie wissen, dass Sie überholen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yell at the person in front to make sure they know you’re overtaking"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gritar a la persona delante para asegurarse de que sabe que vas a adelantar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crier sur la personne devant toi pour s'assurer qu'elle sait que tu dépasses"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前の人に知らせる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "对前面的人大喊，以确保他们知道你要超车"
           }
         }
       }
@@ -677,10 +1986,40 @@
             "value" : "Kig bagud for at sikre, at der ikke er andre cyklister, der er ved at overhale dig"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schauen Sie hinter sich, um sicherzustellen, dass keine anderen Radfahrer dabei sind, Sie zu überholen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Look behind you to make sure there’s not other cyclists about to overtake you"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mirar atrás para asegurarte de que no hay otros ciclistas adelantando"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regarde derrière toi pour t'assurer qu'il n'y a pas d'autres cyclistes sur le point de te dépasser"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後ろを見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向后看，确保没有其他自行车手要超过你"
           }
         }
       }
@@ -693,10 +2032,40 @@
             "value" : "Hvad gør du, når du hører en ringklokke bag dig?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was tun Sie, wenn Sie eine Glocke hinter sich hören?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "What do you do when you hear a bell behind you?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Qué haces cuando oyes un timbre detrás de ti?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Que fais-tu lorsque tu entends une sonnette derrière toi?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後ろからベルの音がしたらどうしますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当你听到背后有铃声时，你会怎么做？"
           }
         }
       }
@@ -706,13 +2075,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Træk til højre og lad personen overhale"
+            "value" : "Trækker til højre og lad personen overhale"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziehen Sie nach rechts und lassen Sie die Person überholen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pull to the right and let the person overtake"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moverse a la derecha y dejar pasar a la persona"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se décaler à droite et laisser la personne dépasser"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右に寄ってその人に追い越させる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "靠右并让那人超过"
           }
         }
       }
@@ -725,10 +2124,40 @@
             "value" : "Sætter farten ned og venter på, at personen overhaler"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verlangsamen Sie und warten Sie, bis die Person überholt"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slow down and wait for the person to overtake"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducir la velocidad y esperar a que la persona adelante"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ralentir et attendre que la personne dépasse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スピードを落としてその人に追い越させる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放慢速度，等待那人超过"
           }
         }
       }
@@ -741,10 +2170,40 @@
             "value" : "Ignorerer det"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorieren Sie es"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ignore it"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorarlo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'ignorer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無視する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忽略它"
           }
         }
       }
@@ -757,10 +2216,40 @@
             "value" : "Ringer med min klokke"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Läuten Sie Ihre Glocke"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ring my bell"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocar mi timbre"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser la sonnette"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分のベルを鳴らす"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按我的铃"
           }
         }
       }
@@ -773,10 +2262,40 @@
             "value" : "Du vil stoppe på cykelstien eller vejen – hvad gør du?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie möchten auf dem Fahrradweg oder der Straße anhalten – was tun Sie?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "You want to stop in bike lane or road – what do you do?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quieres detenerte en el carril bici o la carretera, ¿qué haces?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu veux t'arrêter sur la piste cyclable ou sur la route - que fais-tu?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自転車レーンまたは道路で停止したい場合、どうしますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你想在自行车道或道路上停下来 - 你会怎么做？"
           }
         }
       }
@@ -789,10 +2308,40 @@
             "value" : "Stopper bare"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einfach anhalten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Just stop"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simplemente detente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Juste s'arrêter"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ただ止まる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直接停下"
           }
         }
       }
@@ -805,10 +2354,40 @@
             "value" : "Løfter en af mine hænder og stop"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heben Sie eine Ihrer Hände und stoppen Sie"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Raise one of your hands and stop"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levantar una de tus manos y detente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lever une main et s'arrêter"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手を挙げて止まる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "举起一只手并停下"
           }
         }
       }
@@ -818,13 +2397,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Løfter min venstre hånd og træk til højre"
+            "value" : "Løfter min venstre hånd og trækker til højre"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heben Sie Ihre linke Hand und ziehen Sie nach rechts"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Raise your left hand and pull to the right"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levantar la mano izquierda y tirar hacia la derecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lever la main gauche et tirer vers la droite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左手を挙げて右に引く"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "举起左手并向右拉"
           }
         }
       }
@@ -834,13 +2443,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Løfter min højre hånd og træk til højre"
+            "value" : "Løfter min højre hånd og trækker til højre"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heben Sie Ihre rechte Hand und ziehen Sie nach rechts"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Raise your right hand and pull to the right"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levantar la mano derecha y tirar hacia la derecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lever la main droite et tirer vers la droite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右手を挙げて右に引く"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "举起右手并向右拉"
           }
         }
       }
@@ -853,10 +2492,40 @@
             "value" : "Hvordan drejer du til højre?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wie biegen Sie rechts ab?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "How do you turn to the right?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cómo giras a la derecha?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comment tournes-tu à droite?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どのようにして右折しますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你怎么向右转？"
           }
         }
       }
@@ -866,13 +2535,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Signalérer med din højre arm og drejer derefter til højre"
+            "value" : "Signalérer med højre arm og drejer derefter til højre"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signalisieren Sie mit Ihrem rechten Arm und biegen Sie dann rechts ab"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indicate with your right arm and then turn right"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Señalizar con tu brazo derecho y luego girar a la derecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indiquer avec le bras droit puis tourner à droite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右腕で合図して右折する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用右臂示意然后向右转"
           }
         }
       }
@@ -885,10 +2584,40 @@
             "value" : "Drejer bare til højre"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biegen Sie einfach nach rechts ab"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Just turn to the right"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simplemente gira a la derecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tourner simplement à droite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ただ右に曲がる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直接向右转"
           }
         }
       }
@@ -898,13 +2627,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Signalérer med din venstre arm og drejer derefter til højre"
+            "value" : "Signalérer med venstre arm og drejer derefter til højre"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signalisieren Sie mit Ihrem linken Arm und biegen Sie dann rechts ab"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indicate with your left arm and then turn right"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Señalizar con tu brazo izquierdo y luego girar a la derecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indiquer avec le bras gauche puis tourner à droite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左腕で合図して右折する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用左臂示意然后向右转"
           }
         }
       }
@@ -917,10 +2676,40 @@
             "value" : "Hvordan laver du et venstresving?"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wie machen Sie eine Linkskurve?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "How do you make a left turn?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cómo haces un giro a la izquierda?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comment prends-tu un virage à gauche?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左折するにはどうしますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你怎么左转？"
           }
         }
       }
@@ -933,10 +2722,40 @@
             "value" : "Lav et direkte venstresving"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Machen Sie eine direkte Linkskurve"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Make a direct left turn"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hacer un giro directo a la izquierda"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effectuer un virage à gauche direct"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直接左に曲がる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直接左转"
           }
         }
       }
@@ -949,10 +2768,40 @@
             "value" : "Kryds gaden, stop og vent på grønt igen."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Überqueren Sie die Straße, halten Sie an und warten Sie auf das grüne Licht, um fortzufahren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cross the street, stop and wait for green again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cruzar la calle, detenerse y esperar el semáforo en verde para continuar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traverser la rue, s'arrêter et attendre le feu vert pour continuer."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道を渡って停止し、緑の信号を待つ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "过马路，停下来，等绿灯再走"
           }
         }
       }
@@ -965,10 +2814,40 @@
             "value" : "Bruger fodgængerovergangen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwenden Sie den Fußgängerüberweg"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Use the pedestrian crosswalk"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar el paso de peatones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser le passage piéton"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "横断歩道を使う"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用人行横道"
           }
         }
       }
@@ -981,10 +2860,40 @@
             "value" : "Spørgsmål %1$lld af %2$lld"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frage %1$lld von %2$lld"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Question %1$lld of %2$lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pregunta %1$lld de %2$lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Question %1$lld sur %2$lld"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "質問 %1$lld / %2$lld"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "问题 %1$lld of %2$lld"
           }
         }
       }
@@ -997,10 +2906,40 @@
             "value" : "Bedøm på App Store"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewerten Sie im App Store"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rate on App Store"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Califica en la App Store"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Évaluer sur l'App Store"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Storeで評価する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在App Store上评分"
           }
         }
       }
@@ -1010,13 +2949,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Genopfrisk cykelreglerne ved at se videoene eller scroll videre ↓"
+            "value" : "Genopfrisk cykelreglerne ved at se videoen igen eller scroll videre ↓"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auffrischen der Sicherheitsregeln durch Ansehen dieses Videos oder weiter scrollen ↓"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Refresh the safety rules by watching this video or keep scrolling ↓"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresca las reglas de seguridad viendo este video o sigue desplazándote ↓"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rafraîchis les règles de sécurité en regardant cette vidéo ou continue à scroller ↓"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このビデオを見て安全規則を再確認するか、スクロールを続ける ↓"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "观看此视频以刷新安全规则，或继续滚动↓"
           }
         }
       }
@@ -1029,10 +2998,40 @@
             "value" : "Hold dig altid til cykelstien, når der er en. Hvis der ikke er nogen cykelsti, så kør i højre side af vejen."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halten Sie sich immer an den Fahrradweg, wenn einer verfügbar ist. Wenn es keinen Fahrradweg gibt, bleiben Sie auf der rechten Seite der Straße."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Always stick to the bicycle lane when one is available. If there's no bicycle lane, keep to the right side of the road."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siempre mantente en el carril bici cuando haya uno. Si no hay carril bici, mantente al lado derecho de la carretera."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reste toujours sur la piste cyclable lorsqu'il y en a une. S'il n'y a pas de piste cyclable, reste sur le côté droit de la route."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用可能な場合は常に自転車専用レーンを使用してください。自転車専用レーンがない場合は、道路の右側を維持してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有自行车道时总是坚持使用自行车道。如果没有自行车道，保持在道路的右侧。"
           }
         }
       }
@@ -1045,10 +3044,40 @@
             "value" : "Cykelstier"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrradwege"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bicycle Lanes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carriles para bicicletas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pistes cyclables"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自転車専用レーン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自行车道"
           }
         }
       }
@@ -1061,10 +3090,40 @@
             "value" : "Hvis du cykler med venner, så dan en enkelt række. Det kan virke hyggeligt at køre side om side, men det er mest sikkert i én række."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn Sie mit Freunden Fahrrad fahren, bilden Sie eine einzelne Reihe. Nebeneinander zu fahren mag spaßig erscheinen, aber es ist sicherer, hintereinander zu fahren."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "If you're biking with friends, form a single file line. Riding side by side might seem fun, but it's safer to line up one behind the other."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vas en bicicleta con amigos, formen una sola fila. Puede parecer divertido ir lado a lado, pero es más seguro ir uno detrás del otro."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si tu fais du vélo avec des amis, formez une seule file. Il peut sembler amusant de rouler côte à côte, mais il est plus sûr de se suivre l'un l'autre."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "友達と自転車に乗る場合は、単独ファイルラインを形成してください。並列に乗るのは楽しいかもしれませんが、一列に並ぶ方が安全です。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你和朋友一起骑自行车，排成一行。并排骑行可能看起来很有趣，但一个接一个地排列更安全。"
           }
         }
       }
@@ -1077,10 +3136,40 @@
             "value" : "Kørsel i grupper"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Gruppen fahren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riding in Groups"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conducción en grupo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conduite en groupe"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "グループでのライディング"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "群骑"
           }
         }
       }
@@ -1093,10 +3182,40 @@
             "value" : "Lad andre overhale dig på venstre side, før du tænker på at overhale. Dette gør cykelstierne mest sikre for alle."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lassen Sie andere auf der linken Seite überholen, bevor Sie über das Überholen nachdenken. Dies hält die Fahrbahnen geordnet und sicher für alle."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Allow others to pass you on the left before you think about overtaking. This keeps the lanes orderly and safe for everyone."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permite que otros te adelanten por la izquierda antes de pensar en adelantar. Esto mantiene los carriles ordenados y seguros para todos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laisse les autres te dépasser par la gauche avant de penser à dépasser. Cela maintient l'ordre et la sécurité des pistes pour tout le monde."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追い越す前に、他の人が左から追い越すのを許してください。これにより、レーンはすべての人にとって整然と安全に保たれます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你考虑超车之前，让其他人从左侧超过你。这样可以保持车道有序且对每个人都安全。"
           }
         }
       }
@@ -1109,10 +3228,40 @@
             "value" : "Overhalings Etikette"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Überhol-Etikette"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passing Etiquette"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etiqueta de adelantamiento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Étiquette de dépassement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追い越しエチケット"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "超车礼仪"
           }
         }
       }
@@ -1125,10 +3274,40 @@
             "value" : "Hvis du overhaler, gør det altid venstre om, og kig bagud, inden du gør det."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn Sie überholen, tun Sie dies immer von der linken Seite aus und schauen Sie vorher hinter sich."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "If you're overtaking, always do it from the left side, and look behind you before doing it."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vas a adelantar, siempre hazlo por el lado izquierdo y mira detrás de ti antes de hacerlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si tu dépasses, fais-le toujours du côté gauche, et regarde derrière toi avant de le faire."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追い越す場合は、常に左側から行い、行う前に後ろを見てください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你要超车，始终从左侧进行，并在这样做之前向后看。"
           }
         }
       }
@@ -1141,10 +3320,40 @@
             "value" : "Overhaling"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Überholen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Overtaking"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adelantando"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépassement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追い越し"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "超车"
           }
         }
       }
@@ -1157,10 +3366,40 @@
             "value" : "Hvis du hører en ringklokke, prøver nogen at overhale. Flyt til højre og lad dem passere."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn Sie eine Glocke hören, versucht jemand zu überholen. Bewegen Sie sich nach rechts und lassen Sie sie passieren."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "If you hear a bell, someone's trying to pass. Move to the right and let them through."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si oyes un timbre, alguien está tratando de pasar. Muévete a la derecha y déjalos pasar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si tu entends une sonnette, quelqu'un essaie de passer. Déplace-toi sur la droite et laisse le passer."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベルの音が聞こえたら、誰かが追い越そうとしています。右に移動して通過させてください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你听到铃声，有人试图超过你。向右移动，让他们通过。"
           }
         }
       }
@@ -1173,10 +3412,40 @@
             "value" : "Ringklokken betyder flyt dig"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glocke bedeutet Bewegung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bell Means Move"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El timbre significa moverse"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une sonnette signifie laisse la place"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベルは移動を意味する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "铃声意味着移动"
           }
         }
       }
@@ -1189,10 +3458,40 @@
             "value" : "Vær opmærksom på lastbiler, der drejer til højre. De har blinde vinkler, der kan være farlige, så vær opmærksom."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achten Sie auf Lastwagen, die nach rechts abbiegen. Sie haben tote Winkel, die gefährlich sein können, also bleiben Sie wachsam."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keep an eye out for trucks turning right. They have blind spots that can be dangerous, so stay alert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esté atento a los camiones que giran a la derecha. Tienen puntos ciegos que pueden ser peligrosos, así que mantente alerta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sois vigilant avec les camions qui tournent à droite. Ils ont des angles morts qui peuvent être dangereux, alors reste en alerte."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右に曲がるトラックに注意してください。危険な盲点があるので、警戒してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注意右转的卡车。他们有盲点，可能很危险，所以要保持警觉。"
           }
         }
       }
@@ -1205,10 +3504,40 @@
             "value" : "Pas på lastbiler"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achtung bei Lastwagen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Truck Caution"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Precaución con los camiones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prudence avec les camions"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トラックに注意"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卡车注意"
           }
         }
       }
@@ -1218,13 +3547,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skal du dreje til højre? Vent på det grønne signal og signalér tydeligt din hensigt med din højre arm."
+            "value" : "Skal du dreje til højre? Vent på det grønne signal og signalérer tydeligt din hensigt med højre arm."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möchten Sie nach rechts abbiegen? Warten Sie auf das grüne Signal und signalisieren Sie deutlich Ihre Absicht mit Ihrem rechten Arm."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turning right? Wait for the green signal and clearly indicate your intention with your right arm."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Vas a girar a la derecha? Espera la señal verde e indica claramente tu intención con tu brazo derecho."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu tournes à droite ? Attends le signal vert et indique clairement ton intention avec le bras droit."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右折しますか？緑の信号を待って、右腕で意図を明確に示してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要右转吗？等待绿色信号并用你的右臂清楚地表示你的意图。"
           }
         }
       }
@@ -1237,10 +3596,40 @@
             "value" : "Ritualet for højresving"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritual für Rechtsabbiegen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Right Turn Ritual"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El ritual del giro a la derecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le rituel du virage à droite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右折の儀式"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右转仪式"
           }
         }
       }
@@ -1253,10 +3642,40 @@
             "value" : "Direkte venstresving er ikke tilladt. Kryds i stedet vejen, stop og vent på det grønne lys for at fortsætte."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Direkte Linkskurven sind nicht gestattet. Überqueren Sie stattdessen die Straße, halten Sie an und warten Sie auf das grüne Licht, um fortzufahren."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Direct left turns are a no-go. Instead, cross the street, stop, and wait for the green light to proceed."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los giros a la izquierda directos no están permitidos. En su lugar, cruza la calle, detente y espera la luz verde para continuar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les virages à gauche directs ne sont pas autorisés. Traverse la rue, arrête-toi et attends le feu vert pour continuer."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直接左折することはできません。代わりに、通りを渡って停止し、進むための緑の光を待ちます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直接左转是不允许的。相反，过马路，停下来，等待绿灯再继续。"
           }
         }
       }
@@ -1269,10 +3688,40 @@
             "value" : "Venstresvinget"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Linkskurve"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "The Left Turn"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El giro a la izquierda"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le virage à gauche"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左折"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左转"
           }
         }
       }
@@ -1285,10 +3734,40 @@
             "value" : "Cykelregler"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radregeln"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Safety rules"
+            "value" : "Bike rules"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reglas de bicicleta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Règles à vélo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バイクのルール"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自行车规则"
           }
         }
       }
@@ -1301,10 +3780,40 @@
             "value" : "Cykelregler"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radregeln"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Safety Rules"
+            "value" : "Bike rules"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reglas de bicicleta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Règles à vélo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バイクのルール"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自行车规则"
           }
         }
       }
@@ -1315,6 +3824,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vælg dit land"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Land auswählen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona un país"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionne le pays"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "国を選択"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择国家"
           }
         }
       }
@@ -1327,10 +3866,40 @@
             "value" : "Vælg et svar"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie eine Antwort"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select one answer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona una respuesta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionne une réponse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1つの答えを選択"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个答案"
           }
         }
       }
@@ -1343,10 +3912,40 @@
             "value" : "Vælg to svar"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie zwei Antworten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select two answers"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona dos respuestas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionne deux réponses"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2つの答えを選択"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择两个答案"
           }
         }
       }
@@ -1359,10 +3958,40 @@
             "value" : "Indstillinger"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Settings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
           }
         }
       }
@@ -1375,10 +4004,40 @@
             "value" : "Del med venner"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Freunden teilen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share with friends"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir con amigos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partager avec des amis"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "友達と共有"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "与朋友分享"
           }
         }
       }
@@ -1388,13 +4047,43 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vis BikePass"
+            "value" : "Vis mit BikePass"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siehe meinen BikePass"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Show BikePass"
+            "value" : "Show my BikePass"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar mi BikePass"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher mon BikePass"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "私のBikePassを表示"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示BikePass"
           }
         }
       }
@@ -1405,6 +4094,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foreslået "
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorgeschlagen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sugerido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggestion"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推奨"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建议"
           }
         }
       }
@@ -1417,10 +4136,40 @@
             "value" : "Det"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das \""
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "The "
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El "
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le permis-velo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这"
           }
         }
       }
@@ -1434,46 +4183,40 @@
             "value" : "Kun %d spørgsmål tilbage"
           }
         },
-        "en" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Only %d questions left"
-          }
-        }
-      }
-    },
-    "Trigger Confetti" : {
-      "localizations" : {
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trigger Confetti"
+            "value" : "Nur noch %d Fragen übrig"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trigger Confetti"
+            "value" : "Only %d questions left"
           }
-        }
-      }
-    },
-    "Ulrik Stoch Jensen" : {
-      "localizations" : {
-        "da" : {
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ulrik Stoch Jensen"
+            "value" : "Solo quedan %d preguntas"
           }
-        }
-      }
-    },
-    "United Kingdom" : {
-      "localizations" : {
-        "da" : {
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "United Kingdom"
+            "value" : "Il reste seulement %d questions"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "残り%d質問！"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只剩%d个问题！"
           }
         }
       }
@@ -1486,10 +4229,40 @@
             "value" : " uoficielle "
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " inoffiziell "
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : " unofficial "
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " no oficial "
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " non officiel "
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非公式の"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " 非官方的 "
           }
         }
       }
@@ -1502,20 +4275,40 @@
             "value" : "Gyldig fra %@"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gültig ab %@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Valid from %@"
           }
-        }
-      }
-    },
-    "Valid from July 1st 2024" : {
-      "localizations" : {
-        "da" : {
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gyldig fra 1. juli 2024"
+            "value" : "Válido desde %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valide à partir de %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@から有効"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有效期从%@开始"
           }
         }
       }
@@ -1528,10 +4321,40 @@
             "value" : "Vi ser frem til at se dig på de Københavnske cykelstier"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir freuen uns darauf, Sie auf den Fahrradwegen Kopenhagens zu sehen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "We look forward to seeing you on the bike lanes of Copenhagen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esperamos verte en los carriles bici de Copenhague."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nous avons hâte de te voir sur les pistes cyclables de Copenhague."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コペンハーゲンの自転車専用レーンでお会いできることを楽しみにしています。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我们期待在哥本哈根的自行车道上见到你。"
           }
         }
       }
@@ -1545,10 +4368,40 @@
             "value" : "Fortsæt"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Continue"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続ける"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续"
           }
         }
       }
@@ -1562,10 +4415,40 @@
             "value" : "Før du begynder din tohjulede rejse, vil vi gerne sikre din og andre cyklisters sikkerhed ved at du gennemfører quizzen og modtager dit eget BikePass."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bevor Sie Ihre Fahrt auf zwei Rädern beginnen, möchten wir Ihre Sicherheit und die Sicherheit anderer Radfahrer gewährleisten, indem Sie das Quiz abschließen und Ihren persönlichen BikePass erhalten."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Before you begin your two-wheeled journey, we’d like to ensure your and other cyclists safety by completing the quiz and receive your personal BikePass."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antes de comenzar tu viaje en dos ruedas, nos gustaría asegurar tu seguridad y la de otros ciclistas completando el cuestionario y recibiendo tu BikePass personal."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avant de commencer votre voyage à deux roues, pour votre sécurité et celle des autres cyclistes, nous avons élabore un quiz. Répondez  au quiz et recevez votre BikePass personenel."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二輪の旅を始める前に、クイズを完了して個人のBikePassを受け取ることで、あなたと他のサイクリストの安全を確保したいと思います。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你开始两轮旅程之前，我们想通过完成测验并接收你的个人BikePass来确保你和其他骑行者的安全。"
           }
         }
       }
@@ -1579,10 +4462,40 @@
             "value" : "Velkommen til København 👋"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willkommen in Kopenhagen 👋"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Welcome to Copenhagen 👋"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenido a Copenhague 👋"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenue à Copenhague 👋"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コペンハーゲンへようこそ 👋"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欢迎来到哥本哈根👋"
           }
         }
       }
@@ -1596,10 +4509,40 @@
             "value" : "Afspil videoen og prøv igen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sehen Sie sich das Video an und versuchen Sie es erneut."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Watch the video and try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mira el video e intenta de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regarde la video et essaie encore."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビデオを見て、もう一度試してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "观看视频并重试。"
           }
         }
       }
@@ -1613,10 +4556,40 @@
             "value" : "Ikke helt rigtigt 🤔"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht ganz richtig 🤔"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not quite right 🤔"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No del todo correcto 🤔"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas tout à fait correct 🤔"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ちょっと違う 🤔"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不太对🤔"
           }
         }
       }
@@ -1629,10 +4602,40 @@
             "value" : "Du er bestået!"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie haben bestanden!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "You've passed!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Has aprobado!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu as réussi!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合格です！"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你已通过！"
           }
         }
       }
@@ -1646,10 +4649,40 @@
             "value" : "Du er færdig 🎉"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie sind fertig 🎉"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "You're finished 🎉"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Has terminado 🎉"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "C'est tout!  🎉"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了です 🎉"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你已完成🎉"
           }
         }
       }

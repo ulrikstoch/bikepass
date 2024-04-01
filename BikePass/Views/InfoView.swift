@@ -43,6 +43,8 @@ struct InfoView: View {
             colorScheme == .dark ? Color(UIColor.systemBackground)
                 .ignoresSafeArea(): Color(UIColor.secondarySystemBackground).ignoresSafeArea()
             
+            
+            
             ScrollView {
                 VStack(alignment: .center, spacing: 24) {
                     

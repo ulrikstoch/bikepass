@@ -91,10 +91,10 @@ struct HomeView: View {
 
 #Preview("English") {
     HomeView()
-//        .environment(\.locale, Locale(identifier: "EN"))
+        .environment(\.locale, Locale(identifier: "en-US"))
 }
 
-#Preview("Danish") {
+#Preview {
     HomeView()
         .environment(\.locale, Locale(identifier: "DA"))
 }

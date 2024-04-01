@@ -22,10 +22,11 @@ struct CountrySelectorView: View {
 
     var countries: [String] {
         Locale.isoRegionCodes.compactMap { code -> String? in
-            let name = Locale(identifier: "en").localizedString(forRegionCode: code) ?? "Unknown"
+            let name = Locale.current.localizedString(forRegionCode: code) ?? "Unknown"
             return "\(flag(country: code)) \(name)"
         }.sorted()
     }
+
 
     @State private var searchText = ""
 

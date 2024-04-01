@@ -35,11 +35,26 @@ class QuizViewModel: ObservableObject {
         }
     
     @Published var userCountry: String {
-            didSet {
-                UserDefaults.standard.set(userCountry, forKey: "userCountry")
-                TelemetryManager.send("CountrySelected", with: ["Country": userCountryWithoutEmoji])
+        didSet {
+            UserDefaults.standard.set(userCountry, forKey: "userCountry")
+
+            let components = userCountry.components(separatedBy: " ")
+            guard components.count >= 3 else {
+                print("Unexpected format of userCountry")
+                return
             }
+
+            // The second component should be the country code
+            let countryCode = components[1]
+            let usLocale = Locale(identifier: "en_US")
+            let countryNameInEnglish = usLocale.localizedString(forRegionCode: countryCode) ?? ""
+
+            TelemetryManager.send("CountrySelected", with: ["Country": countryNameInEnglish])
         }
+    }
+
+
+
     
 
 
@@ -59,29 +74,39 @@ class QuizViewModel: ObservableObject {
     }
     
     var userCountryWithoutEmoji: String {
-            let components = userCountry.components(separatedBy: " ")
-            if components.count > 1 {
-                return components.dropFirst().joined(separator: " ")
-            }
-            return userCountry // Return the original string if there's no space
+        let components = userCountry.components(separatedBy: " ")
+        guard components.count >= 3 else {
+            print("Unexpected format of userCountry: \(userCountry)")
+            return ""
         }
+
+        // Assuming the third component is the country name
+        let countryName = components.dropFirst(2).joined(separator: " ")
+        return countryName
+    }
+
+
+
+
+
+
+
 
     init() {
         self.quizCompleted = UserDefaults.standard.bool(forKey: "quizCompleted")
         self.userName = UserDefaults.standard.string(forKey: "userName") ?? ""
         self.userCountry = UserDefaults.standard.string(forKey: "userCountry") ?? ""
 
-        // Set a recommended country based on the device's current locale
         if self.userCountry.isEmpty {
             let locale = Locale.current
-            if self.userCountry.isEmpty {
-                        let locale = Locale.current
-                        if let countryCode = locale.regionCode {
-                            self.userCountry = "\(countryFlag(countryCode: countryCode)) \(locale.localizedString(forRegionCode: countryCode) ?? "")"
-                        }
-                    }
+            if let countryCode = locale.regionCode, let countryName = locale.localizedString(forRegionCode: countryCode) {
+                // Include the country code explicitly
+                self.userCountry = "\(countryFlag(countryCode: countryCode)) \(countryCode) \(countryName)"
+            }
         }
     }
+
+
     
     private func countryFlag(countryCode: String) -> String {
             return countryCode

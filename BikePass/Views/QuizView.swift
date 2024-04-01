@@ -159,9 +159,11 @@ struct QuizView: View {
                 VStack(alignment: .center) {
                     
                     VStack {
+//                        Image(colorScheme == .dark ? "pass_front_dark" : "pass_front")
                         Image("pass_front")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                            .padding([.leading, .bottom, .trailing], 8.0)
                             .shadow(color: .black.opacity(0.08), radius: 1.42548, x: 0, y: 2.30138)
                             .shadow(color: .black.opacity(0.06), radius: 3.60515, x: 0, y: 5.82036)
                             .shadow(color: .black.opacity(0.04), radius: 7.35416, x: 0, y: 11.87298)
@@ -170,8 +172,6 @@ struct QuizView: View {
                     }
 
 
-                    
-            
                     NavigationLink(destination: VideoView(), isActive: $navigateToVideoView) {
                         EmptyView()
                     }
@@ -192,9 +192,11 @@ struct QuizView: View {
                         
                             .foregroundColor(colorScheme == .dark ? Color(UIColor.secondaryLabel) : Color(UIColor.secondaryLabel))
                             .multilineTextAlignment(.leading)
+                            .padding(.bottom)
                             .lineSpacing(5)
                         
                     }
+                    
                     
                     Spacer()
                     
@@ -224,5 +226,6 @@ struct QuizView: View {
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
         QuizView(quiz: quiz)
+            .environment(\.locale, Locale(identifier: "jp"))
     }
 }

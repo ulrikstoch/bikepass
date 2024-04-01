@@ -169,7 +169,7 @@ struct QuestionView: View {
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.leading)
-                            .lineLimit(3)
+                            .lineLimit(4)
                             .fixedSize(horizontal: false, vertical: true)
                         
                         HStack(alignment: .center) {
