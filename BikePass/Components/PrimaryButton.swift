@@ -9,7 +9,7 @@ import SwiftUI
 
 let lightModeGradient = LinearGradient(
     stops: [
-        Gradient.Stop(color: Color(red: 0.87, green: 0.88, blue: 0.89), location: 0.00),
+        Gradient.Stop(color: Color(red: 0.87, green: 0.88, blue: 0.89).opacity(0.7), location: 0.00),
         Gradient.Stop(color: Color(red: 0.92, green: 0.93, blue: 0.93), location: 1.00),
     ],
     startPoint: .top,
@@ -45,7 +45,7 @@ struct PrimaryButton: View {
                 )
             
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
+                .shadow(color: colorScheme == .dark ? Color.white.opacity(0.1) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
             
             Button(action: action, label: {
                 

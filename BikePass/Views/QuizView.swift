@@ -147,75 +147,87 @@ struct QuizView: View {
     
     var body: some View {
         
-        VStack {
-            if viewModel.quizCompleted && showBikePassView {
-                BikePassOwner()
-                    .transition(.opacity) // Apply an opacity transition
-                    .animation(.easeIn, value: showBikePassView) // Animate the transition
-                    .ignoresSafeArea(.all)
-                    .navigationBarHidden(true)
-                
-            } else {
-                VStack(alignment: .center) {
+        ZStack {
+            colorScheme == .dark ? Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all) : Color(UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all)
+            
+//            Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
+//                .resizable()
+//                .edgesIgnoringSafeArea(.all)
+//                .opacity(colorScheme == .dark ? 0.17 : 0.2)
+//            
+            VStack {
+                if viewModel.quizCompleted && showBikePassView {
+                    BikePassOwner()
+                        .transition(.opacity) // Apply an opacity transition
+                        .animation(.easeIn, value: showBikePassView) // Animate the transition
+                        .ignoresSafeArea(.all)
+                        .navigationBarHidden(true)
                     
-                    VStack {
-//                        Image(colorScheme == .dark ? "pass_front_dark" : "pass_front")
-                        Image("pass_front")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding([.leading, .bottom, .trailing], 8.0)
-                            .shadow(color: .black.opacity(0.08), radius: 1.42548, x: 0, y: 2.30138)
-                            .shadow(color: .black.opacity(0.06), radius: 3.60515, x: 0, y: 5.82036)
-                            .shadow(color: .black.opacity(0.04), radius: 7.35416, x: 0, y: 11.87298)
-                            .shadow(color: .black.opacity(0.04), radius: 15.14818, x: 0, y: 24.4561)
-                            .shadow(color: .black.opacity(0.02), radius: 41.5, x: 0, y: 67)
-                    }
+                } else {
+                    VStack(alignment: .center) {
+                        
+                        VStack {
+    //                        Image(colorScheme == .dark ? "pass_front_dark" : "pass_front")
+                            Image("pass_front")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding([.leading, .bottom, .trailing], 8.0)
+                                .shadow(color: .black.opacity(0.08), radius: 1.42548, x: 0, y: 2.30138)
+                                .shadow(color: .black.opacity(0.06), radius: 3.60515, x: 0, y: 5.82036)
+                                .shadow(color: .black.opacity(0.04), radius: 7.35416, x: 0, y: 11.87298)
+                                .shadow(color: .black.opacity(0.04), radius: 15.14818, x: 0, y: 24.4561)
+                                .shadow(color: .black.opacity(0.02), radius: 41.5, x: 0, y: 67)
+                        }
 
 
-                    NavigationLink(destination: VideoView(), isActive: $navigateToVideoView) {
-                        EmptyView()
-                    }
+                        NavigationLink(destination: VideoView(), isActive: $navigateToVideoView) {
+                            EmptyView()
+                        }
 
-                    VStack(alignment: .leading) {
-                        Text(NSLocalizedString("bikepass_intro_title", comment: ""))
-                            .font(.system(size: 37))
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.leading)
-                            .padding(.bottom, 5.0)
-                            .padding(.top, 20.0)
-                        
-                        
-
-                        
-                        Text(NSLocalizedString("bikepass_intro_description", comment: ""))
-                            .fontWeight(.regular)
-                        
-                            .foregroundColor(colorScheme == .dark ? Color(UIColor.secondaryLabel) : Color(UIColor.secondaryLabel))
-                            .multilineTextAlignment(.leading)
-                            .padding(.bottom)
-                            .lineSpacing(5)
-                        
-                    }
-                    
-                    
-                    Spacer()
-                    
-                    VStack {
-                        PrimaryButton(action: {
-                            navigateToVideoView = true
+                        VStack(alignment: .leading) {
+                            Text(NSLocalizedString("bikepass_intro_title", comment: ""))
+                                .font(.system(size: 37))
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.leading)
+                                .padding(.bottom, 5.0)
+                                .padding(.top, 20.0)
                             
-                            let generator = UIImpactFeedbackGenerator(style: .soft)
-                            generator.impactOccurred()
-                        }, label: NSLocalizedString("bikepass_intro_button", comment: ""))
+                            
+
+                            
+                            Text(NSLocalizedString("bikepass_intro_description", comment: ""))
+                                .fontWeight(.regular)
+                            
+                                .foregroundColor(colorScheme == .dark ? Color(UIColor.secondaryLabel) : Color(UIColor.secondaryLabel))
+                                .multilineTextAlignment(.leading)
+                                .padding(.bottom)
+                                .lineSpacing(5)
+                            
+                        }
+                        
+                        
+                        Spacer()
+                        
+                        VStack {
+                            PrimaryButton(action: {
+                                navigateToVideoView = true
+                                
+                                let generator = UIImpactFeedbackGenerator(style: .soft)
+                                generator.impactOccurred()
+                            }, label: NSLocalizedString("bikepass_intro_button", comment: ""))
+                        }
+                        
+                        
                     }
-                    
+                    .padding([.leading, .bottom, .trailing], 24.0)
+    //
+    //                .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
                     
                 }
-                .padding([.leading, .bottom, .trailing], 24.0)
-                
-                .background(colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemBackground))
             }
         }
+        
+
 
         
     }

@@ -114,7 +114,7 @@ struct QuestionView: View {
             }
         }
     }
-
+    
     
     
     
@@ -131,39 +131,45 @@ struct QuestionView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            colorScheme == .dark ? Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all) : Color(UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all)
+            colorScheme == .dark ? Color(UIColor.black).edgesIgnoringSafeArea(.all) : Color(UIColor.white).edgesIgnoringSafeArea(.all)
+            
+            Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+                .opacity(colorScheme == .dark ? 0.17 : 0.2)
+            
             ScrollView {
                 VStack(alignment: .leading) {
                     
                     ZStack {
                         if let player = player {
-                                       VideoPlayer(player: player)
-                                           .aspectRatio(16/9, contentMode: .fit)
-                                           .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                                           .padding()
-                                   }
-
-                                if !isPlaying {
-                                    ZStack(alignment: .bottomTrailing) {
-                                        Image(question.imageName)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                                            .padding()
-                                            
-                                        Image(systemName: "play.circle.fill")
-                                            .padding([.bottom, .trailing], 24.0)
-                                            .font(.system(size: 56))
-                                            .foregroundColor(Color.white)
-                                    }
-                                    .onTapGesture {
-                                        isPlaying = true
-                                        player?.play()
-                                    }
-         
-                                }
+                            VideoPlayer(player: player)
+                                .aspectRatio(16/9, contentMode: .fit)
+                                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                .padding()
+                        }
+                        
+                        if !isPlaying {
+                            ZStack(alignment: .bottomTrailing) {
+                                Image(question.imageName)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                    .padding()
+                                
+                                Image(systemName: "play.circle.fill")
+                                    .padding([.bottom, .trailing], 24.0)
+                                    .font(.system(size: 56))
+                                    .foregroundColor(Color.white)
                             }
-
+                            .onTapGesture {
+                                isPlaying = true
+                                player?.play()
+                            }
+                            
+                        }
+                    }
+                    
                     VStack(alignment: .leading) {
                         Text(question.question)
                             .font(.system(size: 25))
@@ -191,11 +197,11 @@ struct QuestionView: View {
                                 toggleAnswer(at: index)
                                 
                             }) {
-                                HStack {
+                                HStack(spacing: 14) {
                                     Image(systemName: selectedAnswers.contains(index) ? "checkmark.circle.fill": "circle")
                                         .contentTransition(.symbolEffect(.replace))
                                         .font(.system(size: 24))
-                                        .foregroundColor(selectedAnswers.contains(index) ? .white : Color(UIColor.opaqueSeparator))
+                                        .foregroundColor(selectedAnswers.contains(index) ? .white : (colorScheme == .dark ? .white.opacity(0.2) : .black.opacity(0.4)))
                                     Text(question.options[index])
                                         .font(.body)
                                         .fontWeight(.semibold)
@@ -209,8 +215,13 @@ struct QuestionView: View {
                                 
                                 .padding()
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
-                                .background(selectedAnswers.contains(index) ? Color(red: 0.17, green: 0.34, blue: 0.97) : (colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground)))
+                                .background(selectedAnswers.contains(index) ? Color(red: 0.17, green: 0.34, blue: 0.97) : (colorScheme == .dark ? Color(red: 0.18, green: 0.22, blue: 0.26).opacity(0.5) : .white.opacity(1)))
                                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .shadow(color: .black.opacity(0.03), radius: 0.99612, x: 0, y: 0.92742)
+                                .shadow(color: .black.opacity(0.02), radius: 2.51926, x: 0, y: 2.34552)
+                                .shadow(color: .black.opacity(0.01), radius: 5.13905, x: 0, y: 4.78464)
+                                .shadow(color: .black.opacity(0.01), radius: 10.58548, x: 0, y: 9.85544)
+                                .shadow(color: .black.opacity(0.005), radius: 29, x: 0, y: 27)
                             }
                             .padding(.bottom, 2)
                         }
@@ -295,9 +306,9 @@ struct QuestionView: View {
             
         }
         .onAppear {
-                    // Initialize the player when the view appears
-                    self.player = AVPlayer(url: question.videoURL)
-                }
+            // Initialize the player when the view appears
+            self.player = AVPlayer(url: question.videoURL)
+        }
         
         
         

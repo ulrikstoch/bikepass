@@ -27,10 +27,13 @@ struct LearnView: View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
                 
-//                Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
-//                    .resizable()
-//                    .edgesIgnoringSafeArea(.all)
-//                    .opacity(colorScheme == .dark ? 0.1 : 0.4)
+                colorScheme == .dark ? Color(UIColor.systemBackground)
+                    .ignoresSafeArea(): Color(UIColor.secondarySystemBackground).ignoresSafeArea()
+                
+                Image("blur_bg_light")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
+                    .opacity(colorScheme == .dark ? 0.17 : 0.2)
                 
                 VTabView(selection: $selectedTabIndex, indexPosition: .trailing) {
                     
@@ -182,11 +185,16 @@ struct CustomPageControl: UIViewRepresentable {
     
     let numberOfPages: Int
     @Binding var currentPage: Int
+    @Environment(\.colorScheme) var colorScheme
+
+    
     
     func makeUIView(context: Context) -> UIPageControl {
         let view = UIPageControl()
         view.numberOfPages = numberOfPages
         view.backgroundStyle = .prominent
+
+        view.currentPageIndicatorTintColor = colorScheme == .dark ? .white : .systemBlue
         view.addTarget(context.coordinator, action: #selector(Coordinator.pageChanged), for: .valueChanged)
         return view
     }
@@ -194,6 +202,7 @@ struct CustomPageControl: UIViewRepresentable {
     func updateUIView(_ uiView: UIPageControl, context: Context) {
         uiView.numberOfPages = numberOfPages
         uiView.currentPage = currentPage
+        uiView.currentPageIndicatorTintColor = colorScheme == .dark ? .white : .systemBlue
     }
     
     func makeCoordinator() -> Coordinator {

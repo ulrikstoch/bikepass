@@ -146,8 +146,8 @@
 			children = (
 				5CDF612E2A5990C700BF7138 /* ContentView.swift */,
 				5CDF61562A5990D400BF7138 /* HomeView.swift */,
-				5C4938802B7D78280013EF32 /* VideoView.swift */,
 				5CDF615C2A59919D00BF7138 /* QuizView.swift */,
+				5C4938802B7D78280013EF32 /* VideoView.swift */,
 				5C7F18032B718D9A00E60D3A /* QuestionView.swift */,
 				5CDF61602A59979B00BF7138 /* QuizSheetView.swift */,
 				5C73B08C2B72AFAA0058ECDE /* QuizCompleteView.swift */,

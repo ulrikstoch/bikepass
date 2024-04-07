@@ -42,8 +42,14 @@ struct InfoView: View {
         ZStack {
             colorScheme == .dark ? Color(UIColor.systemBackground)
                 .ignoresSafeArea(): Color(UIColor.secondarySystemBackground).ignoresSafeArea()
+//            
+//            colorScheme == .dark ? Color(UIColor.systemBackground)
+//                .ignoresSafeArea(): Color(UIColor.secondarySystemBackground).ignoresSafeArea()
             
-            
+            Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+                .opacity(colorScheme == .dark ? 0.17 : 0.2)
             
             ScrollView {
                 VStack(alignment: .center, spacing: 24) {
@@ -91,10 +97,30 @@ struct InfoView: View {
                         )
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.00) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.04),
+                        radius: 0.68698, x: 0, y: 0.92742
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.03),
+                        radius: 1.73742, x: 0, y: 2.34552
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.02),
+                        radius: 3.54417, x: 0, y: 4.78464
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.02),
+                        radius: 7.30033, x: 0, y: 9.85544
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.01),
+                        radius: 20, x: 0, y: 27
+                    )
                     
                     
                     
-                    VStack(spacing:0) {
+                    VStack(alignment: .leading, spacing:0) {
                         Image("about_CB")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -113,11 +139,31 @@ struct InfoView: View {
                         .padding(.horizontal, 23)
                         .padding(.bottom, 24)
                     }
-                    .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
+                    .background(colorScheme == .dark ? Color(red: 0.19, green: 0.23, blue: 0.29).opacity(0.5) : Color(UIColor.systemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.00) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.04),
+                        radius: 0.68698, x: 0, y: 0.92742
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.03),
+                        radius: 1.73742, x: 0, y: 2.34552
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.02),
+                        radius: 3.54417, x: 0, y: 4.78464
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.02),
+                        radius: 7.30033, x: 0, y: 9.85544
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.01),
+                        radius: 20, x: 0, y: 27
+                    )
                     
                     
-                    VStack {
+                    VStack(alignment: .leading) {
                         Image("builtby")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -134,9 +180,33 @@ struct InfoView: View {
                         }
                         .padding(.horizontal, 24)
                         .padding(.bottom, 24)
+
                     }
-                    .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
+
+
+
+                    .background(colorScheme == .dark ? Color(red: 0.19, green: 0.23, blue: 0.29).opacity(0.5) : Color(UIColor.systemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.00) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.04),
+                        radius: 0.68698, x: 0, y: 0.92742
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.03),
+                        radius: 1.73742, x: 0, y: 2.34552
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.02),
+                        radius: 3.54417, x: 0, y: 4.78464
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.02),
+                        radius: 7.30033, x: 0, y: 9.85544
+                    )
+                    .shadow(
+                        color: colorScheme == .dark ? Color(red: 0.2, green: 0.2, blue: 0.25).opacity(0.0) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.01),
+                        radius: 20, x: 0, y: 27
+                    )
                     
                     
                     Text("BikePass © 2024, version 1.0.0")
@@ -157,6 +227,7 @@ struct InfoView: View {
 
 #Preview {
     InfoView()
+        .environment(\.locale, Locale(identifier: "fr"))
 }
 
 

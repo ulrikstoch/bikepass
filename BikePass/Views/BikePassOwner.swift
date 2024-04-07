@@ -45,16 +45,34 @@ struct BikePassOwner: View {
             }
             .tabItem {
                 
-                Label("BikePass", systemImage: "wallet.pass.fill")
+//                Image("bikepassIcon")
+                Image(systemName: "wallet.pass.fill")
+//                        .foregroundStyle(Color.purple)
+                
+                Text("BikePass")
+                //                Label("BikePass", systemImage: "bikepassIcon")
             }
             
             LearnView()
                 .tabItem {
                     
-                    Label("Safety Rules", systemImage: "book.pages.fill")
+                    Image(systemName: "book.pages.fill")
+                        .symbolRenderingMode(.hierarchical)
+//                        .foregroundStyle(Color.purple)
+                    
+                    Text("Safety Rules")
+//                    Label("Safety Rules", systemImage: "book.pages.fill")
+//                        .symbolRenderingMode(.hierarchical)
                 }
             SettingsView(viewModel: viewModel)
                 .tabItem {
+                    
+//                    if selectedTab == 0 {
+//                        Image("settingsIcon")
+//                    } else {
+//                        Image("settingsIcon")
+//                    }
+//                    Text("Settings")
                     
                     Label("Settings", systemImage: "gearshape")
                 }
@@ -69,5 +87,5 @@ struct BikePassOwner: View {
     
     BikePassOwner()
     
-        .environment(\.locale, Locale(identifier: "DE"))
+        .environment(\.locale, Locale(identifier: "DA"))
 }

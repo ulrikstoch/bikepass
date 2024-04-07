@@ -20,18 +20,21 @@ struct CountrySelectorView: View {
         return "\(flag(country: countryCode)) \(countryName)"
     }
 
-    var countries: [String] {
-        Locale.isoRegionCodes.compactMap { code -> String? in
-            let name = Locale.current.localizedString(forRegionCode: code) ?? "Unknown"
-            return "\(flag(country: code)) \(name)"
-        }.sorted()
-    }
+    var countries: [(emoji: String, code: String, name: String)] {
+            Locale.isoRegionCodes.compactMap { code -> (String, String, String)? in
+                guard let name = Locale.current.localizedString(forRegionCode: code) else {
+                    return nil
+                }
+                let flag = flag(country: code)
+                return (flag, code, name)
+            }.sorted(by: { $0.name < $1.name })
+        }
 
 
     @State private var searchText = ""
 
-    var filteredCountries: [String] {
-        searchText.isEmpty ? countries : countries.filter { $0.lowercased().contains(searchText.lowercased()) }
+    var filteredCountries: [(emoji: String, code: String, name: String)] {
+        searchText.isEmpty ? countries : countries.filter { $0.name.lowercased().contains(searchText.lowercased()) }
     }
 
     var body: some View {
@@ -49,12 +52,16 @@ struct CountrySelectorView: View {
                 }
 
                 Section(header: Text("All Countries")) {
-                    ForEach(filteredCountries, id: \.self) { country in
+                    ForEach(filteredCountries, id: \.code) { country in
                         Button(action: {
-                            self.selectedCountry = country
+                            // Constructing the string in "Emoji CountryCode CountryName" format
+                            self.selectedCountry = "\(country.emoji) \(country.code) \(country.name)"
                             dismiss()
                         }) {
-                            Text(country)
+                            HStack {
+                                Text(country.emoji)
+                                Text(country.name)
+                            }
                         }
                     }
                 }

@@ -40,11 +40,11 @@ class QuizViewModel: ObservableObject {
 
             let components = userCountry.components(separatedBy: " ")
             guard components.count >= 3 else {
-                print("Unexpected format of userCountry")
+                print("Unexpected format of userCountry: \(userCountry)")
                 return
             }
 
-            // The second component should be the country code
+            // Assuming the country code is the second component
             let countryCode = components[1]
             let usLocale = Locale(identifier: "en_US")
             let countryNameInEnglish = usLocale.localizedString(forRegionCode: countryCode) ?? ""
@@ -52,6 +52,7 @@ class QuizViewModel: ObservableObject {
             TelemetryManager.send("CountrySelected", with: ["Country": countryNameInEnglish])
         }
     }
+
 
 
 

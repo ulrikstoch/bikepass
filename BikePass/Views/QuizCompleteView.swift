@@ -50,7 +50,7 @@ struct QuizCompleteView: View {
     //    var viewModel: QuizViewModel
     var dismissAction: () -> Void
     
-    private var recommendedCountry: String? {
+    var recommendedCountry: String? {
         let locale = Locale.current
         guard let countryCode = locale.regionCode,
               let countryName = locale.localizedString(forRegionCode: countryCode) else {
@@ -157,7 +157,7 @@ struct QuizCompleteView: View {
                             )
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                    .shadow(color: colorScheme == .dark ? Color.white.opacity(0.15) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
+                    .shadow(color: colorScheme == .dark ? Color.white.opacity(0.07) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
                     .opacity(fieldOpacity)
                 
                     .overlay(
@@ -190,7 +190,7 @@ struct QuizCompleteView: View {
                                     )
                             )
                             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                            .shadow(color: colorScheme == .dark ? Color.white.opacity(0.15) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
+                            .shadow(color: colorScheme == .dark ? Color.white.opacity(0.07) : Color.white.opacity(0.45), radius: 0, x: 0, y: 1)
                             .opacity(fieldOpacity)
                     }
                     .sheet(isPresented: $showingCountrySelector) {

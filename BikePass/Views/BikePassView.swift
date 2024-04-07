@@ -128,7 +128,7 @@ struct BikePassView: View {
     @State private var highlightPosition = CGPoint.zero
     @State private var scaleCircle: CGFloat = 1.0
     @State private var isFlipped = false
-
+    
     
     
     
@@ -160,12 +160,10 @@ struct BikePassView: View {
                 
                 colorScheme == .dark ? Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all) : Color(UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all)
                 
-                //                Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
-                //                    .resizable()
-                //                    .edgesIgnoringSafeArea(.all)
-                //                    .opacity(colorScheme == .dark ? 0.1 : 0.4)
-                ////                    .blendMode(.overlay)
-                ////                    .aspectRatio(contentMode: .fit)
+                Image(colorScheme == .dark ? "blur_bg_light" : "blur_bg_light")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
+                    .opacity(colorScheme == .dark ? 0.17 : 0.25)
                 
                 
                 
@@ -173,7 +171,8 @@ struct BikePassView: View {
                 ZStack {
                     Image("pattern")
                         .frame(width: 300, height: 300)
-                        .rotationEffect(Angle(radians: -motionManager.roll / 5))
+                        .rotationEffect(Angle(degrees: motionManager.roll * 360 / 60))
+                        .opacity(0.7)
                     
                     Image("highlight")
                     //                        .frame(width: 300, height: 300)
@@ -219,11 +218,11 @@ struct BikePassView: View {
                                                 Gradient.Stop(color: Color(red: 0.97, green: 0.99, blue: 0.9), location: 0.99),
                                             ],
                                             center: .center,
-                                            angle: .degrees(motionManager.roll * 180 / .pi)
+                                            angle: .degrees(motionManager.roll * 360 / 25)
                                         )
                                         
                                         .shadow(.inner(color: .black.opacity(0.25), radius: 1, x: 0, y: 1))
-
+                                        
                                     )
                                     .shadow(color: .white.opacity(0.4), radius: 0, x: 0, y: 1)
                                     .frame(width: 48, height: 48)
@@ -249,18 +248,29 @@ struct BikePassView: View {
                                 
                             }
                             .frame(width: 48, height: 48)
-//                            
-//                            
-//                            Image("badge")
+                            //
+                            //
+                            //                            Image("badge")
                         }
                         
                         
                         ZStack {
+                            
+                            
                             Image("center_circle")
                                 .resizable()
                                 .scaledToFit()
                             
                             
+                            Circle()
+                                .frame(width: 230)
+                                .foregroundStyle(.white)
+                                .opacity(0.000001)
+                                .onTapGesture {
+                                    confettiCounter += 1
+                                    let generator = UIImpactFeedbackGenerator(style: .soft)
+                                    generator.impactOccurred()
+                                }
                             
                             CircularTextView(text: "Official CPH BikePass ·  \(viewModel.bikePassID) · ")
                                 .font(.system(size: 10))
@@ -268,25 +278,10 @@ struct BikePassView: View {
                                 .foregroundColor(Color(red: 0.11, green: 0.21, blue: 0.53).opacity(0.57))
                                 .shadow(color: .white.opacity(0.20), radius: 0, x: 0, y: 1)
                             
+                            
                         }
-//                        .scaleEffect(scale)
-//                        .gesture(
-//                            DragGesture(minimumDistance: 0)
-//                                .onChanged({ _ in
-//                                    withAnimation(.easeIn(duration: 0.4)) {
-//                                        scale = 0.5 // Scale down when tap begins
-//                                    }
-//                                })
-//                                .onEnded({ _ in
-//                                    withAnimation(.bouncy(duration: 0.4, extraBounce: 0.5)) {
-//                                        scale = 1.0 // Ensure it scales back to normal when the gesture ends
-//                                        confettiCounter += 1
-//                                        let generator = UIImpactFeedbackGenerator(style: .soft)
-//                                        generator.impactOccurred()
-//                                    }
-//                                })
-//                        )
-
+                        
+                        
                         
                         
                         Spacer()
@@ -307,6 +302,7 @@ struct BikePassView: View {
                             Spacer()
                         }
                     }
+                    
                 }
                 
                 .padding([.leading, .bottom, .trailing], 24.0)
@@ -318,8 +314,8 @@ struct BikePassView: View {
                 .background(
                     LinearGradient(
                         stops: [
-                            Gradient.Stop(color: Color(red: 0.9, green: 0.9, blue: 0.9), location: 0.00),
-                            Gradient.Stop(color: Color(red: 0.78, green: 0.8, blue: 0.82), location: 1.00),
+                            Gradient.Stop(color: Color(hue: 0.625, saturation: 0.051, brightness: 0.964), location: 0.00),
+                            Gradient.Stop(color: Color(hue: 0.643, saturation: 0.093, brightness: 0.92), location: 1.00),
                         ],
                         startPoint: UnitPoint(x: 0.5, y: 0),
                         endPoint: UnitPoint(x: 0.5, y: 1)
@@ -386,12 +382,12 @@ struct BikePassView: View {
                 
                 .rotation3DEffect(Angle(degrees: rotationAngleX), axis: (x: 1, y: 0, z: 0))
                 .rotation3DEffect(Angle(degrees: rotationAngleY), axis: (x: 0, y: 1, z: 0))
-//                .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                //                .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
                 .gesture(
                     DragGesture(minimumDistance: 0)
                     
                         .onChanged { value in
-                            withAnimation(.bouncy) {
+                            withAnimation(.default) {
                                 let cardSize = geometry.size
                                 let tapLocation = value.location
                                 
@@ -414,13 +410,13 @@ struct BikePassView: View {
                                 let diffY = contentCenter.y - value.location.y
                                 highlightPosition = CGPoint(x: contentCenter.x + diffX, y: contentCenter.y + diffY)
                                 
-                                let dragThreshold: CGFloat = 100 // Adjust the threshold based on your preference
-                                    if abs(value.translation.width) > dragThreshold {
-                                        withAnimation {
-                                            isFlipped.toggle()
-                                            print("flipped")
-                                        }
-                                    }
+                                //                                let dragThreshold: CGFloat = 100 // Adjust the threshold based on your preference
+                                //                                    if abs(value.translation.width) > dragThreshold {
+                                //                                        withAnimation {
+                                //                                            isFlipped.toggle()
+                                //                                            print("flipped")
+                                //                                        }
+                                //                                    }
                             }
                             
                         }
@@ -434,12 +430,22 @@ struct BikePassView: View {
                         }
                 )
                 
-                .shadow(color: .black.opacity(0.17), radius: 1.20376, x: 0, y: 0.99621)
-                .shadow(color: .black.opacity(0.12), radius: 2.89279, x: 0, y: 2.39404)
-                .shadow(color: .black.opacity(0.1), radius: 5.44688, x: 0, y: 4.50776)
-                .shadow(color: .black.opacity(0.09), radius: 9.71629, x: 0, y: 8.04107)
-                .shadow(color: .black.opacity(0.07), radius: 18.17326, x: 0, y: 15.03994)
-                .shadow(color: .black.opacity(0.05), radius: 43.5, x: 0, y: 36)
+                //blue shadow
+                //                .shadow(color: Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.12), radius: 1.45281, x: 0, y: 2.0201)
+                //                .shadow(color: Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.09), radius: 3.4913, x: 0, y: 4.85457)
+                //                .shadow(color: Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.07), radius: 6.57381, x: 0, y: 9.14073)
+                //                .shadow(color: Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.06), radius: 11.72656, x: 0, y: 16.30551)
+                //                .shadow(color: Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.05), radius: 21.93324, x: 0, y: 30.49765)
+                //                .shadow(color: Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.03), radius: 52.5, x: 0, y: 73)
+                
+                //black shadow w. blue
+                .shadow(color: colorScheme == .dark ? Color.black.opacity(0.12) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.12), radius: 1.20376, x: 0, y: 0.99621)
+                .shadow(color: colorScheme == .dark ? Color.black.opacity(0.09) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.09), radius: 2.89279, x: 0, y: 2.39404)
+                .shadow(color: colorScheme == .dark ? Color.black.opacity(0.12) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.12), radius: 5.44688, x: 0, y: 4.50776)
+                .shadow(color: colorScheme == .dark ? Color.black.opacity(0.12) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.12), radius: 9.71629, x: 0, y: 8.04107)
+                .shadow(color: colorScheme == .dark ? Color.black.opacity(0.12) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.12), radius: 18.17326, x: 0, y: 15.03994)
+                .shadow(color: colorScheme == .dark ? Color.black.opacity(0.12) : Color(red: 0.01, green: 0.2, blue: 0.44).opacity(0.12), radius: 43.5, x: 0, y: 36)
+                
                 .offset(self.dragState)
                 .padding(.horizontal, 24)
                 
